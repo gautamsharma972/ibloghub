@@ -1,0 +1,98 @@
+﻿@page
+@model iBlogHub.Areas.Identity.Pages.Account.Manage.DraftsModel
+@{
+    ViewData["Title"] = "My Published Stories";
+    ViewData["ActivePage"] = iBlogHub.Areas.Identity.Pages.Account.Manage.ManageNavPages.Drafts;
+    Layout = "~/Areas/Identity/Pages/Account/Manage/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 main-loop">
+            <h4 class="font-weight-bold spanborder">
+                <span>Drafts</span>
+                @if (Model.Posts.Count > 0)
+                {
+                    <a class="text-danger pr-0 text-right float-right" style="font-size:medium; font-weight:lighter" id="btndelAll" href="#"><i class="fa fa-times"></i> Remove all</a>
+                }
+            </h4>
+            @if (Model.Posts.Count > 0)
+            {
+                foreach (var item in Model.Posts)
+                {
+                    <div class="mb-5 d-flex justify-content-between main-loop-card">
+                        <div class="pr-3">
+                            <h2 class="mb-1 h4 font-weight-bold">
+                                <a class="text-dark" href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">@item.PostTitle</a>
+                            </h2>
+                            <small class="d-block text-muted">
+                                <a href="@Url.Action("Index", "Profile", new { username= item.Author.UserName})" class="text-muted">@item.Author.FirstName @item.Author.LastName</a>
+                                In <span class="catlist">
+                                    <a class="text-capitalize text-muted smoothscroll" href="@Url.Action("Posts", "Categories", new { slug = item.Category.Name })">@item.Category.Name</a>
+                                </span>
+                            </small>
+                            <small class="text-muted">
+                                @{ iBlogHub.Helpers.TimesAgo postedOn = new iBlogHub.Helpers.TimesAgo();
+                                    var time = postedOn.Time(item.PostDate);
+                                }
+                                @time&nbsp;·&nbsp;@item.ViewsCount views
+                            </small>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (item.Author.Id == _user.User.Id || User.IsInRole("Admin"))
+                                {
+                                    <span>
+                                        ·
+                                        <a class="text-sm-left" href="@Url.Action("Edit", "Stories", new { slug = item.slug})"><i class="fa fa-pencil"></i> Edit</a>
+                                        ·
+                                        <a class="text-sm-left text-danger" onclick="delPost('@item.Id', '@item.PostTitle');" href="#" data-title="@item.PostTitle" data-href="@Url.Action("Delete", "Stories", new { slug = item.slug})"><i class="fa fa-times"></i> Delete</a>
+
+                                    </span>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="lead">
+                    No saved drafts!
+                </p>
+
+            }
+            @if (Model.Posts != null && Model.Posts.Count > 10)
+            {
+                <div class="mt-5">
+                    <ul class="pagination">
+                        @*@for (var i = 1; i <= Model.Count(); i++)
+                            {
+                                <li class="page-item @(i == Model.Count() ? "active" : "")">
+                                    <a asp-controller="Stories" asp-action="Index" asp-route-currentpage="@i" class="page-link">@i</a>
+                                </li>
+                            }*@
+                    </ul>
+                    @*@PagedList.Core.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+                        new PagedListRenderOptions
+                        {
+                            UlElementClasses = new string[] { "pagination" },
+                            LiElementClasses = new string[] { "page-item" },
+                            DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                            DisplayLinkToLastPage = PagedListDisplayMode.IfNeeded,
+                            LinkToPreviousPageFormat = string.Format("« Prev"),
+                            LinkToLastPageFormat = string.Format("»"),
+
+                        })*@
+
+                </div>
+            }
+
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+</div>
+@using (Html.BeginForm(null, null, FormMethod.Post, new { id = "__AjaxAntiForgeryForm" }))
+{
+    @Html.AntiForgeryToken()
+}

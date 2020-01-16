@@ -1,0 +1,406 @@
+﻿@model iBlogHub.Models.PostsInputModel
+@{
+    ViewData["Title"] = "Publish new Article";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.KeyWords = "Publish, new, story, code, articles, ibloghub";
+    ViewBag.MetaDescription = "Publish new Story";
+    IList<string> Atags = new List<string>();
+    var availableTags = _postsService.Tags;
+    string tags = "";
+    foreach (var item in availableTags)
+    {
+        Atags.Add('"' + item.Name + '"');
+    }
+    tags = string.Join(",", Atags);
+    ViewBag.image = new[] {
+        "Replace", "Align", "Caption", "Remove", "InsertLink", "OpenImageLink", "-",
+        "EditImageLink", "RemoveImageLink", "Display", "AltText", "Dimension"
+            };
+    //"Formats",
+    ViewBag.tools = new[] {
+        "Bold", "Italic", "Underline", "StrikeThrough",
+        "FontColor", "BackgroundColor",
+        "LowerCase", "UpperCase", "|",
+        "Alignments", "OrderedList", "UnorderedList",
+        "Outdent", "Indent", "|",
+        "CreateLink", "Image", "CreateTable", "ClearFormat",
+        "SourceCode", "FullScreen", "|", "Undo", "Redo"
+            };
+
+}
+
+@section Styles{
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/lib/TagBox/css/jquery.tagit.css" rel="stylesheet" type="text/css">
+    <link href="~/lib/TagBox/css/tagit.ui-zendesk.css" rel="stylesheet" type="text/css">
+}
+<div class="container">
+    <div class="paged-content">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div id="step-2">
+            <form method="post" asp-action="Create" enctype="multipart/form-data">
+                <input type="hidden" value="@Model.Category" asp-for="Category" />
+
+                <h3 class="font-weight-bold spanborder">
+                    <span>Write in @Model.SelectedCategoryName</span>
+                    <a href="javascript: document.getElementById('btnSubmit').click();" class="btn btn-primary pull-right" style="float:right">Publish now</a>
+                </h3>
+                <div class="page-content" id="wrapper">
+
+                    @if (Model.HasMessage)
+                    {
+                        <div class="alert alert-@Model.MessageClass alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <strong>@(Model.MessageClass == "danger" ? Html.Raw("<i class='fa fa-exclamation-triangle'></i>") : Html.Raw("<i class='fa fa-info'></i>"))</strong> &nbsp; @Model.Message
+                        </div>
+                    }
+
+                    <div class="row">
+                        <div class="col-md-8" id="main-wrapper">
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <small>
+                                        Start writing your post below, any irrelevant contents will be removed.
+                                    </small>
+                                    <span class="toggle-button bs-tooltip pull-right" style="display: inline-block; float:right; cursor: pointer"
+                                          data-toggle="tooltip" data-placement="right" title="More Post Settings">
+                                        <i class="fa fa-bars"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <input class="form-control-lg form-control" style="font-size:x-large; font-weight:normal" asp-for="Title" placeholder="Title" />
+                                    <span class="text-danger" asp-validation-for="Title"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                @*<div class="col-sm-12" id="fileupload">
+                                        <label asp-for="Podcast"></label>
+                                        <input  asp-for="Podcast" class="form-control" />
+                                        <span class="text-danger" asp-validation-for="Podcast"></span>
+                                    </div>*@
+
+                                <div class="col-md-12">
+                                    <textarea asp-for="Description" id="postDescription" class="form-control"></textarea>
+                                    <span class="text-danger" asp-validation-for="Description"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <strong>Tags <span class="text-danger">*</span></strong>
+                                </div>
+                                <div class="col-md-9">
+                                    <input asp-for="Tags" class="form-control" id="txtTags" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12" style="border-left:ridge; border-width:1px;" id="sidebar-wrapper">
+
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <p class="lead">Post Features</p><hr />
+                                </div>
+                                <div class="col-md-12">
+                                    <strong>Meta Description</strong>
+                                    <br />
+                                    <p class="text-muted" style="font-size:85%;">Meta description/summary of your Post.</p>
+                                    <textarea placeholder="Summarize your post." style="max-height:100px;" asp-for="Excerpt" rows="3" maxlength="255" class="form-control"></textarea>
+                                    <span class="text-danger" asp-validation-for="Excerpt"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <hr />
+                                    <strong>Featured Image</strong><br />
+                                    <small class="text-muted">Visualize your post with a featured Image</small>
+                                    <div class="avatar-upload">
+                                        <div class="avatar-edit">
+                                            <input type="file" asp-for="FeaturedImage" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                                            <label for="imageUpload"></label>
+                                        </div>
+                                        <div class="avatar-preview">
+                                            <div id="imagePreview" style="background-image: url('/Uploads/defaultPic.jpg');">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+
+                                <div class="col-md-12">
+                                    <strong>Enable/Disable Comments</strong><br />
+                                    <p class="text-muted" style="font-size:85%">By default comments are enabled for every posts, uncheck below to disable comments for this Post.</p>
+                                    <input asp-for="CommentStatus" />
+                                    <label asp-for="CommentStatus">Enable Comments</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12"><p>&nbsp;</p></div>
+                        <div class="col-sm-12">
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <input type="submit" value="Publish" asp-for="PostStatus" id="btnSubmit" style="display:none;" />
+                                    <input type="submit" id="btnDraft" value="Draft" asp-for="PostStatus" style="display:none;" />
+                                    <a href="@Href("~/Identity/Account/Manage/MyStories")" class="btn btn-outline-primary btn-default">My Stories</a>
+                                </div>
+                                <div class="col-sm-6 justify-content-end text-right">
+                                    <a href="javascript: document.getElementById('btnDraft').click();" class="btn btn-secondary">Save as Draft</a>
+                                    <a href="@Url.Action("Index", "Home")" class="btn btn-outline-danger">Cancel</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    @*</form>*@
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+@*<div class="modal fade" id="requestCat" tabindex="-1" role="dialog" aria-labelledby="requestCatTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="requestCatTitle">Request a new Category</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label class="control-label">Category Name</label>
+                            <input type="text" id="txtCatName" required class="form-control" placeholder="Category Name" />
+                            <span class="text-danger" id="ErrorMessage"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-danger closeModal" data-dismiss="modal">Cancel</button>
+                    <button type="button" id="btnNewCat" class="btn btn-primary">Request</button>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+<form method="post" action="">
+    @Html.AntiForgeryToken()
+</form>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="~/js/notify.js"></script>
+    @*<script src="https://cdn.tiny.cloud/1/3pyar2sdtjsm04tdmmtpug76cy3wsywjcvz7onmr2bfpocfy/tinymce/5/tinymce.min.js"></script>*@
+    <script src="~/lib/tinymce/tinymce.min.js"></script>
+    <script src="~/lib/tinymce/plugins/image/plugin.min.js"></script>
+    <script src="~/js/prettify.js"></script>
+    <script src="~/css/jquery-ui.min.js"></script>
+    <script src="~/lib/TagBox/js/tag-it.js" type="text/javascript" charset="utf-8"></script>
+    <script src="~/lib/fileUpload/vendor/jquery.ui.widget.js"></script>
+    <script src="~/lib/fileUpload/jquery.iframe-transport.js"></script>
+    <script src="~/lib/fileUpload/jquery.fileupload.js"></script>
+    <script src="~/lib/fileUpload/jquery.fileupload-process.js"></script>
+    <script src="~/lib/fileUpload/jquery.fileupload-image.js"></script>
+    <script src="~/lib/fileUpload/jquery.fileupload-audio.js"></script>
+    <script src="~/lib/fileUpload/jquery.fileupload-video.js"></script>
+    <script src="~/lib/fileUpload/jquery.fileupload-validate.js"></script>
+    <script src="~/lib/fileUpload/jquery.fileupload-ui.js"></script>
+    <script type="text/javascript">
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                    $('#imagePreview').hide();
+                    $('#imagePreview').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+                //localStorage.setItem("postFeatured", input.files[0]);
+            }
+        }
+        $("#imageUpload").change(function () {
+            readURL(this);
+        });
+
+        $('#txtTags').tagit({
+            availableTags: [@Html.Raw(tags)]
+        });
+          $('#fileupload').fileupload();
+        $(function () {
+
+             tinymce.init({
+                selector: '#postDescription',
+
+                plugins: [
+                    "autoresize advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                    "searchreplace wordcount visualblocks visualchars code fullscreen",
+                    "insertdatetime media nonbreaking save table directionality",
+                    "emoticons template paste textcolor colorpicker textpattern imagetools placeholder codesample"
+                ],
+                menubar: false,
+                image_advtab: false,
+                toolbar: "undo redo | bold italic underline| blockquote codesample | alignleft aligncenter alignright alignjustify | bullist numlist | link image media | emoticons",
+                max_height: 700,
+                min_height: 450,
+                statusbar: false,
+                placeholder: "Start writing your contents here ...",
+                paste_data_images: true,
+                 advimagescale_filter_class: "img-fluid",
+                relative_urls : false,
+remove_script_host : false,
+//convert_urls : true,
+                images_upload_handler: function (blobInfo, success, failure) {
+                var data = JSON.stringify({ fileBytes: blobInfo.base64(), fileName: blobInfo.blob().name });
+
+                $.ajax({
+                    type: 'POST',
+                    url: '/api/ImageHandler',
+                    data: data,
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    success: function (result) {
+                        success(result.imageUrl);
+                    },
+                    error: function (xhr, status, error) {
+                        var err = eval("(" + xhr.responseText + ")");
+                        failure(err.message);
+                    }
+                });
+            },
+                image_dimensions: false,
+                image_class_list: [
+                    { title: 'None', value: 'img img-responsive' }
+                ],
+                style_formats: [
+                    {
+                        title: 'Image Left', selector: 'img', styles: {
+                            'float': 'center',
+                            'margin': '0 10px 0 10px',
+                            'max-width': '600px',
+                            'width': '500px'
+                        }
+                    }
+
+                ]
+            });
+
+
+            var $menu = $('#sidebar-wrapper');
+            var $content = $('#main-wrapper');
+            if ($.cookie('offcanvas') == 'hide') {
+                $content.addClass('no-transition');
+                $menu.hide();
+                $menu.css('right', -($menu.outerWidth() + 10));
+                $content.removeClass('col-md-8').addClass('col-md-12');
+            }
+            else if ($.cookie('offcanvas') == 'show') {
+                $menu.show(500).animate({ right: 0 });
+                $content.removeClass('no-transition');
+                $content.removeClass('col-md-12').addClass('col-md-8');
+            }
+
+
+            $('.toggle-button').click(function () {
+                $content.removeClass('no-transition');
+                if ($menu.is(':visible') && $content.hasClass('col-md-8')) {
+                    // Slide out
+                    $menu.animate({
+                        right: -($menu.outerWidth() + 10)
+                    }, function () {
+                        $menu.hide(1000);
+                    });
+                    $content.removeClass('col-md-8').addClass('col-md-12');
+                    $.cookie('offcanvas', 'hide');
+                }
+                else {
+                    // Slide in
+                    $menu.show(500).animate({ right: 0 });
+                    $content.removeClass('col-md-12').addClass('col-md-8');
+                    $.cookie('offcanvas', 'show');
+                }
+                if ($content.hasClass('col-md-12') && $menu.is(':hidden')) {
+                    $menu.animate({
+                        right: 0
+                    }, function () {
+                        $menu.show(1000);
+                    });
+                    //  $menu.show();
+                    $content.removeClass('no-transition');
+                    $content.removeClass('col-md-12').addClass('col-md-8');
+                }
+            });
+            //$('.bs-tooltip').tooltip();
+            $(".validation-summary-errors").find("ul").addClass("list-group");
+
+            $(".validation-summary-errors").find("li").addClass("list-group-item list-group-item-danger");
+
+            $('#btnNewCat').click(function (event) {
+                if ($("#txtCatName").val() == "" || $("#txtCatName").val() == null) {
+                    $("#txtCatName").focus();
+                }
+                else {
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/Stories/RequestCategories",
+                        data:{
+                            Name: $('#txtCatName').val()
+                        },
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader("XSRF-TOKEN",
+                                $('input:hidden[name="__RequestVerificationToken"]').val());
+                        },
+
+                        success: function (data) {
+                            if (data.status == 0) {
+                                $.notify(data.message, {
+                                    animation: true,
+                                    animationType: "drop",
+                                    color: "#fff", background: "#D44950"
+                                });
+                            }
+                            else if (data.status == 1) {
+                                var selectCat = $('#selectCat');
+                                selectCat.append(
+                                    $('<option selected></option>').val(data.id).html(data.name)
+                                );
+                                $(".closeModal").click();
+                                $("body").fadeIn();
+                                $("#selectCat").focus();
+                            }
+                        },
+                        failure: function (response) {
+                            alert(response);
+                        }
+                    });
+                }
+            });
+
+         var $form = null;
+
+        $form = $('#fileupload').fileupload({
+            dataType: 'json'
+        });
+
+    $('#fileupload').addClass('fileupload-processing');
+
+
+        });
+    </script>
+}

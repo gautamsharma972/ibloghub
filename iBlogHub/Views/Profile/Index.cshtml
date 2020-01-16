@@ -1,0 +1,140 @@
+﻿@model IEnumerable<iBlogHub.Models.PostsViewModel>
+@{
+    var ProfileUser = ViewData["ProfileUser"] as iBlogHub.Areas.Identity.Data.AppUsers;
+    ViewData["Title"] = "Posts by " + ProfileUser.UserName;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Featured = _postsService.FeaturedPosts;
+    var Categories = _postsService.Categories;
+    ViewBag.IncludeAds = true;
+    ViewBag.KeyWords = "Collection,Stories,Codes,and,Latest,Articles, ibloghub, blogs, " +
+                "blog, posts, categories, " + ProfileUser.UserName + ", Posts by " + ProfileUser.UserName;
+    ViewBag.MetaDescription = "Recent Stories, Articles and Learning contents";
+}
+
+@section Seo{
+
+    @if (Model.Count() > 0)
+    {
+        <meta name="image" content="~/Uploads/@Model.Where(a => a.FeaturedImage != null).FirstOrDefault().FeaturedImage" />
+    }
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 main-loop">
+            <h6 class="font-weight-bold spanborder">
+                <span>POSTS BY @ProfileUser.FirstName.ToUpper()</span>
+
+            </h6>
+            @if (Model.Count() >= 1)
+            {
+                await Html.RenderPartialAsync("_MainPostsWidget", Model);
+
+            }
+
+            <div class="clearfix"></div>
+            <div class="featured-category text-right mt-3 pb-3 text-uppercase smaller">
+                <a href="@Url.Action("Index", "Stories")">
+                    All Stories <i class="fa fa-angle-right"></i>
+                </a>
+
+                <div class="clearfix"></div>
+            </div>
+
+            @if (Model.Count() > 10)
+            {
+                <div class="mt-5">
+                    <ul class="pagination">
+                        @*@for (var i = 1; i <= Model.Count(); i++)
+                            {
+                                <li class="page-item @(i == Model.Count() ? "active" : "")">
+                                    <a asp-controller="Stories" asp-action="Index" asp-route-currentpage="@i" class="page-link">@i</a>
+                                </li>
+                            }*@
+                    </ul>
+                    @*@PagedList.Core.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+                        new PagedListRenderOptions
+                        {
+                            UlElementClasses = new string[] { "pagination" },
+                            LiElementClasses = new string[] { "page-item" },
+                            DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                            DisplayLinkToLastPage = PagedListDisplayMode.IfNeeded,
+                            LinkToPreviousPageFormat = string.Format("« Prev"),
+                            LinkToLastPageFormat = string.Format("»"),
+
+                        })*@
+
+                </div>
+            }
+
+            <div class="clearfix"></div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="sticky-top sticky-top-offset">
+                <div class="card card-primary profile-card">
+                    <img class="card-img-top" src="~/Uploads/@(!string.IsNullOrEmpty(ProfileUser.Photo)?ProfileUser.Photo:"defaultavatar.png")" alt="@ProfileUser.FirstName @ProfileUser.LastName">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">
+                            @ProfileUser.FirstName @ProfileUser.LastName
+                            <br />
+                            <small class="text-muted" style="font-size:medium">@@@ProfileUser.UserName</small>
+                        </h4>
+                        @if (!string.IsNullOrEmpty(ProfileUser.About))
+                        {
+                            <p>@ProfileUser.About</p>
+                        }
+
+                        @if (ProfileUser.SocialProfiles.Count > 0)
+                        {
+                            <hr />
+                            <b>Support @ProfileUser.FirstName</b>
+                            <br />
+                            @if (ProfileUser.SocialProfiles.Count > 0)
+                            {
+                                <br />
+                                @foreach (var item in ProfileUser.SocialProfiles)
+                                {
+                    <a href="@item.Url" target="_blank" class="btn btn-round btn-outline-primary btn-gray">
+                        @{ if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.Facebook.ToString())
+                            {
+                                <i class="fab fa-facebook-f"></i>
+                            }
+                            else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.Instagram.ToString())
+                            {
+                                <i class="fab fa-instagram"></i>
+                            }
+                            else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.LinkedIn.ToString())
+                            {
+                                <i class="fab fa-linkedin-in"></i>
+                            }
+                            else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.StackOverflow.ToString())
+                            {
+                                <i class="fab fa-stack-overflow"></i>
+                            }
+                            else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.BuyMeACoffee.ToString())
+                            {
+                                <i class="fa fa-coffee"></i>
+                            }
+                            else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.Twitter.ToString())
+                            {
+                                <i class="fab fa-twitter"></i>
+                            }
+                            else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.GitHub.ToString())
+                            {
+                                <i class="fab fa-github"></i>
+                            }
+                        }
+                    </a><span>&nbsp;</span>
+                                }
+
+                            }
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

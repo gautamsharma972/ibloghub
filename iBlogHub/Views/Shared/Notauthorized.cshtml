@@ -1,0 +1,19 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Not Authorized";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="text-center">
+            <p>&nbsp;</p>  
+                <p><i class="fa fa-exclamation-triangle text-danger fa-5x"></i><br /><b class="text-muted">403, Not Authorized</b></p>
+
+                <p class="lead">
+                   Sorry you are not authorized to edit this post. <br /> Click <a href="javascript: window.history.back();">here</a>
+                    to go back or head to <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Home</a>
+                </p>
+            
+        </div>
+    </div>
+</div>

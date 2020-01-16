@@ -1,0 +1,34 @@
+﻿@model iBlogHub.Models.PostsViewModel
+
+<form asp-controller="Stories" asp-action="AddToBookmark" data-ajax-begin="onBegin"
+      data-ajax-failure="NotifyError" data-ajax-success="Notify"
+      data-ajax="true" data-ajax-method="POST">
+    <small class="d-block text-muted">
+        <a href="@Url.Action("Index", "Profile", new { username = Model.Author.UserName })" class="text-muted">
+            @Model.Author.FirstName @Model.Author.LastName
+        </a>
+        
+    @*In <span class="catlist">
+        <a class="text-capitalize text-muted smoothscroll"
+           href="@Url.Action("Posts", "Categories", new { slug = Model.Category.Name })">@Model.Category.Name</a>
+    </span>*@
+    </small>
+    <small class="text-muted">
+        @{ iBlogHub.Helpers.TimesAgo postedOn = new iBlogHub.Helpers.TimesAgo();
+            var time = postedOn.Time(Model.PostDate);
+            iBlogHub.Helpers.MinReads minReads = new iBlogHub.Helpers.MinReads(Model.PostContent);
+        }
+        @Model.PostDate.ToString("dd MMM, yy")
+        &nbsp;·&nbsp;
+        @minReads.TotalMinReads()
+        @*@Model.ViewsCount views*@
+    </small>
+    <input type="hidden" name="slug" value="@Model.slug" />
+    @*<span class="text-muted">&nbsp;·&nbsp;</span>*@
+    <button style="padding:0px;" class="btn-link btn btn-xs text-muted float-right btnAddtoStory"
+            title="@(User.Identity.IsAuthenticated ? "Add to Bookmarks" : "Login to add this story to your Bookmarks")"
+            type="submit" data-toggle="tooltip">
+        <i class="far fa-bookmark text-muted"></i>
+    </button>
+</form>
+@* TODO: Check if user has already added the story to bookmarks *@

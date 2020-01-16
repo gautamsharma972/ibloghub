@@ -1,0 +1,113 @@
+﻿@model IEnumerable<iBlogHub.Data.Posts>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <h5>All Posts</h5>
+        <hr/>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <td><b>#</b></td>
+                    <td>
+                        Title
+                    </td>
+                    <td>Type</td>
+                    <td>
+                        Slug
+                    </td>
+                    @*<td>
+                    Description
+                </td>*@
+                    <td>Image</td>
+                    <td>
+                        Postedby
+                    </td>
+                    <td>
+                        PostedOn
+                    </td>
+                    <td>Verification Status</td>
+                    <td>
+                        Action
+                    </td>
+                </tr>
+                @{
+                    int count = 0;
+                }
+                @foreach (var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <td>@count</td>
+                        <td>@item.PostTitle</td>
+                        <td><label class="bg-warning">@item.Category.Title</label></td>
+                        <td>@item.slug</td>
+                        @*<td>@item.PostContent</td>*@
+                        <td>
+                            @{ if (!string.IsNullOrEmpty(item.FeaturedImage))
+                                {
+                                    <img class="rounded" height="250" width="250" src="~/Uploads/@item.FeaturedImage" />
+
+                                }
+                                else
+                                {
+                                    Html.Raw("No Image provided");
+                                }
+                            }
+                        </td>
+                        <td>@item.Author.UserName</td>
+                        <td>@item.PostDate</td>
+                        <td class="@(item.isVerified?"bg-success":"bg-danger")">@item.isVerified </td>
+                        <td>
+                            <a class="btn btn-sm btn-danger" href="#" data-id="@item.Id" id="btnDel" data-title="@item.PostTitle" data-page="Details">Delete</a>
+                            
+                            @{
+                                if (!item.isVerified)
+                                {
+                                    <button onclick="Verify('@item.Id')" class="btn btn-primary btn-sm">Verify Now</button>
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        
+    </div>
+
+
+<form method="post" action="">
+    @Html.AntiForgeryToken()
+</form>
+
+
+@section Scripts{
+
+    <script type="text/javascript">
+        function Verify(id) {
+            $.ajax({
+                url: '/Admin/Verify',
+                type: 'POST',
+                data: {
+                    id: id,
+                    __RequestVerificationToken: token
+                },
+                success: function (response) {
+                    Swal.fire(
+                        "Verified",
+                        "" + response.msg
+                    ).then(function () { window.location.reload(); });
+                },
+                failure: function (response) {
+                    Swal.fire(
+                        "Error",
+                        "Oops, something went wrong! Please try again later.",
+                        "error"
+                    )
+                }
+            });
+        }
+    </script>
+}

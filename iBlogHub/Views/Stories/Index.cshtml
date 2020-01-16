@@ -1,0 +1,88 @@
+﻿@using PagedList;
+@using PagedList.Core;
+@model IEnumerable<iBlogHub.Models.PostsViewModel>
+@{
+    ViewBag.Title = "Read Stories, Articles and inspirational contents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Featured = _postsService.FeaturedPosts;
+    var Categories = _postsService.Categories;
+    ViewBag.IncludeAds = true;
+    ViewBag.KeyWords = "Collection,Stories,Codes,and,Latest,Articles, ibloghub, blogs, blog, posts";
+    ViewBag.MetaDescription = "Recent Stories, Articles and Learning contents";
+    List<Guid> usedIds = new List<Guid>();
+}
+@section Seo{
+
+    @if (Model.Count() > 0)
+    {
+        <meta name="image" content="~/Uploads/@Model.Where(a => a.FeaturedImage != null).FirstOrDefault().FeaturedImage" />
+    }
+}
+
+<div class="container">
+    <div class="page-content">
+        <div class="row mt-3">
+            <div class="col-md-8 main-loop col-sm-12">                
+                @if (Model.Count() >= 1 || Model != null)
+                {
+                    foreach (var item in Model.Where(a => !string.IsNullOrEmpty(a.FeaturedImage)).OrderBy(a => a.Id).Take(1))
+                    {
+                        await Html.RenderPartialAsync("_PostSingleFeatured", item);
+                        usedIds.Add(item.Id);
+                    }
+                    <div class="clearfix"></div>
+                    <p class="spanborder small">@*<span>Latest</span>*@</p>
+                    await Html.RenderPartialAsync("_MainPostsWidget", Model.Where(a => !usedIds.Contains(a.Id)).Take(16));
+                }
+
+
+
+                @*@if (Model.Count() > 10)
+        {
+            <div class="mt-5">
+                <ul class="pagination">
+                    @for (var i = 1; i <= Model.Count(); i++)
+                    {
+                        <li class="page-item @(i == Model.Count() ? "active" : "")">
+                            <a asp-controller="Stories" asp-action="Index" asp-route-currentpage="@i" class="page-link">@i</a>
+                        </li>
+                    }
+                </ul>
+                @PagedList.Core.PagedListPager(Model, page => Url.Action("Index", new { page = page }),
+        new PagedListRenderOptions
+        {
+            UlElementClasses = new string[] { "pagination" },
+            LiElementClasses = new string[] { "page-item" },
+            DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+            DisplayLinkToLastPage = PagedListDisplayMode.IfNeeded,
+            LinkToPreviousPageFormat = string.Format("« Prev"),
+            LinkToLastPageFormat = string.Format("»"),
+
+        })
+
+            </div>
+                } *@
+
+                <div class="clearfix"></div>
+
+                <div class="spanborder"></div>
+                @{
+                    await Html.RenderPartialAsync("_CategoryWidget", Categories);
+
+                }
+            </div>
+
+            <div class="col-md-4">
+                <div class="sticky-top sticky-top-offset">
+                    <div class="col-sm-12">
+                        @{
+                            await Html.RenderPartialAsync("_featuredPosts", Featured);
+                        }
+                        <partial name="_sidebarAds" />
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>

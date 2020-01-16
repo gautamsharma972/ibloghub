@@ -1,0 +1,29 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="text-center">
+            <p>&nbsp;</p>
+
+            @if (Model.ErrorType == iBlogHub.Helpers.Enums.ErrorType.Posts)
+            {
+                <p><i class="fa fa-exclamation-triangle text-danger fa-5x"></i><br /><b class="text-muted">404, Not Found</b></p>
+
+                <p class="lead">
+                    Whoops! Could not find that post, maybe Author has removed that post! <br /> Click <a href="javascript: window.history.back();">here</a>
+                    to go back or head to <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Home</a>
+                </p>
+            }
+            @if (Model.ShowRequestId)
+            {
+                <p class="text-muted small">
+                    Request ID: <code>@Model.RequestId</code>
+                </p>
+            }
+
+        </div>
+    </div>
+</div>

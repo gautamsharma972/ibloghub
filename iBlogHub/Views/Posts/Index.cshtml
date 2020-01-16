@@ -1,0 +1,455 @@
+﻿@model iBlogHub.Models.PostsViewModel
+@{
+    ViewData["Title"] = Model.PostTitle;
+    if (Model.Excerpt != null)
+    {
+        ViewBag.MetaDescription = Model.Excerpt;
+    }
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var moreArticles = ViewData["MoreArticles"] as IEnumerable<iBlogHub.Models.PostsViewModel>;
+    ViewBag.Author = Model.Author.FirstName + " " + Model.Author.LastName;
+    var PrevArticles = ViewData["PrevArticle"] as iBlogHub.Models.PostsViewModel;
+    var NextArticles = ViewData["NextArticle"] as iBlogHub.Models.PostsViewModel;
+    ViewBag.IncludeAds = true;
+    IList<string> Ktags = new List<string>();
+    string tags = "";
+    foreach (var item in Model.Tags)
+    {
+        Ktags.Add(item.Name);
+    }
+    foreach (var item in Model.PostTitle.Split(" "))
+    {
+        Ktags.Add(item);
+    }
+    tags = string.Join(",", Ktags);
+    string keywords = "ibloghub," + Model.Category.Name + "," + tags + Model.PostTitle.Replace(" ", ",") + "," + Model.Author.FirstName + "," + Model.Author.LastName;
+    ViewBag.KeyWords = keywords;
+    string currentUrl = Context.Request.Scheme + "://" + Context.Request.Host + Context.Request.Path;
+    string enc = System.Net.WebUtility.UrlEncode(currentUrl);
+    ViewBag.Page = "Details";
+
+}
+@section Seo{
+    <meta name="image" content="http://ibloghub.com/Uploads/@Model.FeaturedImage" />
+    <meta name="author" content="@Model.Author.FirstName @Model.Author.LastName" />
+    <meta name="twitter:image" content="http://ibloghub.com/Uploads/@Model.FeaturedImage" />
+    <meta name="twitter:description" content="@Model.Excerpt" />
+    <meta name="twitter:title" content="@Model.PostTitle" />
+    <meta name="thumbnail" content="http://ibloghub.com/Uploads/@Model.FeaturedImage" />
+    <meta itemprop="image" content="http://ibloghub.com/Uploads/@Model.FeaturedImage" />
+    <meta itemprop="author" content="@Model.Author.FirstName @Model.Author.LastName" />
+    <meta itemprop="articleBody" content="@Model.Excerpt" />
+    <meta itemprop="creator" content="@Model.Author.FirstName @Model.Author.LastName" />
+    <meta itemprop="dateCreated" content="@Model.PostDate" />
+    <meta itemprop="datePublished" content="@Model.PostDate" />
+    <meta itemprop="url" content="@currentUrl" />
+    <meta itemprop="thumbnailUrl" content="http://ibloghub.com/Uploads/@Model.FeaturedImage" />
+    <meta itemprop="about" content="@Model.Excerpt" />
+    <meta itemprop="keywords" content="@keywords" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="@ViewData["Title"]" />
+    <meta property="og:description" content="@ViewBag.MetaDescription" />
+    <meta property="og:image" content="http://ibloghub.com/Uploads/@Model.FeaturedImage" />
+
+    <script type="application/ld+json">
+        {
+        "@@context": "https://schema.org",
+        "@@type": "NewsArticle",
+        "mainEntityOfPage": {
+        "@@type": "WebPage",
+        "@@id": "@Model.slug"
+        },
+        "headline": "@Model.PostTitle",
+        "image": [
+        "http://ibloghub.com/Uploads/@Model.FeaturedImage"
+        ],
+        "datePublished": "@Model.PostDate.ToUniversalTime()",
+        "dateModified": "@Model.PostDate.ToUniversalTime()",
+        "author": {
+        "@@type": "Person",
+        "name": "@Model.Author.FirstName @Model.Author.LastName"
+        },
+        "publisher": {
+        "@@type": "Organization",
+        "name": "iBlogHub",
+        "logo": {
+        "@@type": "ImageObject",
+        "url": "http://www.ibloghub.com/images/sitelogo.png"
+        }
+        },
+        "description": "@Model.Excerpt"
+        }
+    </script>
+
+
+}
+
+<style type="text/css">
+    #signup {
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+        bottom: -50px;
+        height: 50px;
+        left: 0;
+        background-color: purple;
+        transition: bottom .5s linear;
+        color: white;
+        font-size: 2em;
+        text-align: center
+    }
+
+        #signup.show {
+            bottom: 0;
+        }
+</style>
+
+<link href="~/lib/highlight/prism.css" rel="stylesheet" />
+<div class="container">
+    <div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+        <div class="h-100 tofront">
+            <div class="row @((Model.FeaturedImage!=null|| Model.FeaturedImage!="defaultPic.jpg")? "justify-content-between": "justify-content-center")">
+                <div class="@((Model.FeaturedImage!=null|| Model.FeaturedImage!="defaultPic.jpg")? "col-md-6": "col-md-8") pr-0 col-sm-12 pr-md-4 pt-4 pb-4 align-self-center">
+                    <p class="text-uppercase font-weight-bold">
+                        <span class="catlist">
+                            <a class="scroll text-danger" href="@Url.Action("Posts", "Categories", new { slug = Model.Category.slug })">@Model.Category.Name</a>
+                        </span>
+                    </p>
+                    <h1 class="display-4 mb-4 article-headline">@Model.PostTitle</h1>
+                    <div class="d-flex align-items-center">
+                        <img class="rounded-circle" src="~/Uploads/@(Model.Author.Photo==null?"avatar.jpg":Model.Author.Photo)" alt="@Model.Author.FirstName" width="70">
+                        <small class="ml-3">
+                            <a href="@Url.Action("Index", "Profile", new { username = Model.Author.UserName})" class="text-dark">
+                                @Model.Author.FirstName
+                            </a>
+                            @if (Model.Author.SocialProfiles.Count > 0)
+                            {
+                                foreach (var item in Model.Author.SocialProfiles)
+                                {
+                                    if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.BuyMeACoffee.ToString())
+                                    {
+                                        <span>
+                                            <a class="btn btn-outline-success btn-sm btn-round ml-2" href="@item.Url" target="_blank"><i class="fa fa-coffee"></i> Donate</a>
+                                        </span>
+                                    }
+
+                                }
+                            }
+                            <span class="text-muted d-block mt-1">
+                                @Model.PostDate.ToString("MMM dd, yyyy") ·
+                                <span class="reading-time">
+                                    @{
+                                        iBlogHub.Helpers.MinReads minReads = new iBlogHub.Helpers.MinReads(Model.PostContent);
+                                    }
+                                    @minReads.TotalMinReads()
+                                </span>
+
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    if (User.IsInRole("Admin") || User.Identity.Name == Model.Author.UserName)
+                                    {
+                                        <span>
+                                            ·
+                                            <a class="text-sm-left" href="@Url.Action("Edit", "Stories", new { slug = Model.slug})"><i class="fa fa-edit"></i> Edit</a>
+                                            ·
+                                            <a class="text-sm-left text-danger" href="#" data-id="@Model.Id" id="btnDel" data-title="@Model.PostTitle" data-page="Details"><i class="fa fa-times"></i> Delete</a>
+                                        </span>
+                                    }
+                                }
+                            </span>
+                        </small>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 pr-0 align-self-center">
+                    <img id="@(string.IsNullOrEmpty(Model.FeaturedImage)== true?"imgFeatured":"imgNone")" class="rounded"
+                         src="@(string.IsNullOrEmpty(Model.FeaturedImage)==true?"": $"/Uploads/{Model.FeaturedImage}")"
+                         alt="@Model.PostTitle">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div class="alignfullincol">
+    <div class="container-fluid max1140 pt-4 pb-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-1 pr-4 mb-4 col-md-12 col-sm-12 order-md-first">
+                <div class="sticky-top sticky-top-offset text-left float-left">
+                    <p>&nbsp;</p>
+                    <form asp-controller="Stories" asp-action="AddToBookmark" data-ajax-begin="onBegin"
+                          data-ajax-failure="NotifyError" data-ajax-success="Notify"
+                          data-ajax="true" data-ajax-method="POST">
+                        <input type="hidden" name="slug" value="@Model.slug" />
+                        <button class="btn-round btn btn-gray btn-outline-dark btnAddtoStory" title="@(User.Identity.IsAuthenticated? "Add to Bookmark": "Login to Bookmark this Story.")" type="submit" data-toggle="tooltip"><i class="fa fa-bookmark"></i></button>
+                    </form>
+                    <div class="text-muted">
+                        <p>&nbsp;</p>
+                        Share
+                    </div>
+                    <div class="share d-inline-block">
+
+                     
+                        <div class="a2a_kit a2a_kit_size_32 a2a_default_style" style="line-height: 32px;">
+                            <a class="a2a_dd" href="https://www.addtoany.com/share#url=@currentUrl;title=@Model.PostTitle&amp;images=@Model.FeaturedImage&amp;summary=@Model.Excerpt"><span class="a2a_svg a2a_s__default a2a_s_a2a" style="background-color: rgb(1, 102, 255);"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_label a2a_localize" data-a2a-localize="inner,Share">Share</span></a>
+                            <a class="a2a_s_facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=@currentUrl&amp;title=@Model.PostTitle&amp;images=@Model.FeaturedImage&amp;summary=@Model.Excerpt" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(59, 89, 152);"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path></svg></span><span class="a2a_label">Facebook</span></a>
+                            <a class="a2a_button_twitter" target="_blank" href="/#twitter" rel="nofollow noopener">
+                                <span class="a2a_svg a2a_s__default a2a_s_twitter" style="background-color: rgb(85, 172, 238);">
+                                    <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path fill="#FFF" d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path>
+                                    </svg>
+                                </span><span class="a2a_label">Twitter</span>
+                            </a>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <script async="" src="https://static.addtoany.com/menu/page.js"></script>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-9 col-lg-9">
+                <article class="article-post">
+                    @Html.Raw(Model.PostContent.Trim())
+                    <div class="clearfix"></div>
+                </article>
+                <div class="clearfix"></div>
+                <div class="mb-4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <hr />
+                        </div>
+                        <div class="col-sm-1" style="border-right:ridge; border-width:1px;">
+                            <span>Tags</span>
+                        </div>
+                        <div class="col-sm-11">
+                            <span class="taglist">
+                                @foreach (var item in Model.Tags)
+                                {
+                                    <a href="@Url.Action("Posts", "Tags", new { slug = item.Name})"><span class="badge badge-gray">@item.Name</span> </a>
+                                }
+                            </span>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-sm-12"><hr /></div>
+                    </div>
+                </div>
+                <div class="border p-5 bg-lightblue">
+                    <div class="row justify-content-between">
+                        <div class="col-md-6 mb-2 mb-md-0">
+                            <h5 class="font-weight-bold">Join Newsletter</h5>
+                            Get the latest news right in your inbox. We never spam!
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <partial name="_NewsletterForm" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-2 align-self-center">
+                        <img class="rounded-circle" src="~/Uploads/@(Model.Author.Photo==null?"avatar.jpg":Model.Author.Photo)" alt="@Model.Author.FirstName" width="90">
+                    </div>
+                    <div class="col-md-10">
+                        <h5 class="font-weight-bold">
+                            Written by @Model.Author.FirstName @Model.Author.LastName
+                            <span>
+                                <a href="@Url.Action("Index", "Profile", new { username = Model.Author.UserName})" class="btn btn-outline-success btn-sm btn-round ml-2">Profile</a>
+                            </span>
+                        </h5>
+                        @Html.Raw(Model.Author.About)
+                        @if (Model.Author.SocialProfiles.Count > 0)
+                        {
+                            <p class="mt-2 text-muted">Connect with @Model.Author.FirstName</p>
+
+                            @foreach (var item in Model.Author.SocialProfiles.Where(a => a.Url != null || !string.IsNullOrWhiteSpace(a.Url)))
+                            {
+                                <a href="@item.Url" target="_blank" class="btn btn-round btn-outline-primary btn-gray">
+                                    @{ if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.Facebook.ToString())
+                                        {
+                                            <i class="fab fa-facebook-f"></i>
+                                        }
+                                        else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.Instagram.ToString())
+                                        {
+                                            <i class="fab fa-instagram"></i>
+                                        }
+                                        else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.LinkedIn.ToString())
+                                        {
+                                            <i class="fab fa-linkedin-in"></i>
+                                        }
+                                        else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.StackOverflow.ToString())
+                                        {
+                                            <i class="fab fa-stack-overflow"></i>
+                                        }
+                                        else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.BuyMeACoffee.ToString())
+                                        {
+                                            <i class="fa fa-coffee"></i>
+                                        }
+                                        else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.Twitter.ToString())
+                                        {
+                                            <i class="fab fa-twitter"></i>
+                                        }
+                                        else if (item.Name == iBlogHub.Helpers.Enums.SocialProfiles.GitHub.ToString())
+                                        {
+                                            <i class="fab fa-github"></i>
+                                        }
+                                    }
+                                </a><span>&nbsp;</span>
+                            }
+
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+
+        @if (moreArticles != null)
+        {
+            <div class="">
+                <div class="pt-5 pb-1 pr-0 pl-0">
+                    <div class="row">
+                        <div class="col-sm-12">
+
+                            <hr />
+                            <p class="text-black-50 text-small">
+                                More Stories from iBlogHub
+                                <a asp-controller="Stories" asp-action="Index" class="text-primary float-right align-items-end">View all &gt;</a>
+                            </p>
+                            <hr />
+                            <p>&nbsp;</p>
+
+
+                        </div>
+                        @foreach (var item in moreArticles.Take(3))
+                        {
+                            <div class="col-sm-6 mb-4 mb-md-0 col-md-4">
+                                <div class="card border-0 minh100 cardwithshadow onhoverup">
+                                    @if (!string.IsNullOrEmpty(item.FeaturedImage))
+                                    {
+                                        <div class="pr-0 align-self-center">
+                                            <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                                                <img class="rounded w-100" src="~/Uploads/@item.FeaturedImage" alt="@item.PostTitle">
+                                            </a>
+                                        </div>
+                                    }
+
+                                    <div class="pr-0 pr-md-4 pt-4 pb-4">
+                                        <div class="col-sm-12">
+                                            <h2 class="h4 font-weight-bold">
+                                                <a class="text-dark" href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">@item.PostTitle</a>
+                                            </h2>
+                                            <div>
+
+                                                @{
+                                                    await Html.RenderPartialAsync("_PostFooterSection", item);
+
+                                                }
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+    @if (Model.CommentStatus == iBlogHub.Helpers.Enums.CommentStatus.Allowed)
+    {
+        <div class="comments container">
+            <div class="row">
+                <div class="col-md-2 col-lg-2"></div>
+                <div class="col-lg-8 col-sm-12 col-md-8">
+                    <div id="comments" class="mt-5">
+                        <div id="disqus_thread"></div>
+                        <script>
+                            var disqus_config = function () {
+                                this.page.url = '@currentUrl';
+                                this.page.identifier = '@Model.slug';
+                            };
+
+                                (function () { 
+                                    var d = document, s = d.createElement('script');
+                                    s.src = 'https://ibloghub.disqus.com/embed.js';
+                                    s.setAttribute('data-timestamp', +new Date());
+                                    (d.head || d.body).appendChild(s);
+                                })();
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    }
+
+</div>
+
+<div class="alertbar">
+    <div class="container">
+        <div class="row prevnextlinks small font-weight-bold">
+            @if (PrevArticles != null)
+            {
+                <div class="col-md-6 rightborder pl-0">
+                    <a class="text-dark" href="@Url.Action("Index", "Posts", new { category= PrevArticles.Category.slug, slug = PrevArticles.slug })">
+                        @PrevArticles.PostTitle  &nbsp;
+                        @if (PrevArticles.FeaturedImage != null || PrevArticles.FeaturedImage != "defaultPic.jpg")
+                        {
+                            <img height="30px" class="mr-1" src="~/Uploads/@PrevArticles.FeaturedImage">
+                        }
+                    </a>
+                </div>
+            }
+            @if (NextArticles != null)
+            {
+                <div class="col-md-6 text-right pr-0">
+                    <a class="text-dark" href="@Url.Action("Index", "Posts", new { category=NextArticles.Category.slug, slug = NextArticles.slug })">
+
+                        @if (NextArticles.FeaturedImage != null || NextArticles.FeaturedImage != "defaultPic.jpg")
+                        {
+                            <img height="30px" class="mr-1" src="~/Uploads/@NextArticles.FeaturedImage">
+                        }
+                        @NextArticles.PostTitle
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script src="~/lib/highlight/prism.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var obj = '<object style="width:100% !important; height:344px;">' +
+                '<param name="movie" value="https://www.youtube.com/v/[vid]&hl=en&fs=1">' +
+                '</param><param name="allowFullScreen" value="true"></param><param ' +
+                'name="allowscriptaccess" value="always"></param><em' +
+                'bed src="https://www.youtube.com/v/[vid]&hl=en&fs=1" ' +
+                'type="application/x-shockwave-flash" allowscriptaccess="always" ' +
+                'allowfullscreen="true" style="width:100% !important; height:344px;"></embed></object> ';
+
+            $('.article-post:contains("youtube.com/watch")').each(function () {
+                var that = $(this);
+                var vid = that.html().match(/(?:v=)([\w\-]+)/g); 
+                if (vid.length) {
+                    $.each(vid, function () {
+                        that.append(obj.replace(/\[vid\]/g, this.replace('v=', '')));
+                    });
+                }
+            });
+            $('.article-post a').attr('target', '_blank');
+
+        });
+
+    </script>
+}

@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using iBlogHub.Areas.Identity.Data
+@inject SignInManager<AppUsers> SignInManager
+@inject UserManager<AppUsers> UserManager
+
+
+<li class="nav-item">
+    <a class="nav-link" href="@Href("~/Stories/")" data-toggle="tooltip" title="Read all stories">Stories</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="@Href("~/Quotes/")" data-toggle="tooltip" title="Quotes">Quotes</a>
+</li>
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Create", "Stories")" data-toggle="tooltip" title="Publish a new story">Publish</a>
+    </li>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="rounded-circle" src="~/Uploads/@_cUser.User.Photo" height="25" width="25" /> @User.Identity.Name
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Bookmarks" title="Bookmarks"> Bookmarks</a>
+            <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/MyStories" title="Manage Published Stories"> My Stories</a>
+            <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Drafts" title="Saved Drafts"> Drafts</a>
+            <a class="dropdown-item" asp-area="Identity" asp-page="/Account/Manage/Index" title="Edit Profile"> Edit Profile</a>
+            <div class="dropdown-divider"></div>
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="dropdown-item">Logout</button>
+            </form>
+
+        </div>
+    </li>
+
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link" href="@Url.Action("Create", "Stories")" data-toggle="tooltip" title="Publish a new story">Publish</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Sign In</a>
+    </li>
+    <li class="nav-item highlight">
+        <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Get Started</a>
+    </li>
+}
+
+

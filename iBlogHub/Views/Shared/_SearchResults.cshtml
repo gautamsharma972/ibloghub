@@ -1,0 +1,127 @@
+﻿@model IEnumerable<iBlogHub.Models.PostsViewModel>
+@{
+    ViewBag.Title = "Search " + ViewBag.SearchString;
+    var Featured = _postsService.FeaturedPosts;
+}
+
+<div class="container">
+    <div class="page-content">
+        <div class="row mt-3">
+            <div class="col-md-8 main-loop">
+                <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem bg-lightblue position-relative">
+                    <div class="pl-4 pr-0 h-100 tofront">
+                        <div class="row">
+                            <div class="col-md-12 pt-4 pb-4 pr-4">
+                                <h1 class="mb-3">Search </h1>
+                                <p class="mb-3 lead">
+                                    Found @Model.Count() Posts matching '@ViewBag.SearchString'
+                                    @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                                    {
+                                        <div class="form-group row">
+                                            <div class="col-sm-12">
+                                                <div class="input-group mb-3">
+                                                    <input type="Search" class="form-control" name="q" value="@ViewBag.SearchString" placeholder="Search..." aria-describedby="search">
+
+                                                    <div class="input-group-append">
+                                                        <input type="submit" class="input-group-btn btn btn-primary" value="Search" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                @if (Model.Count() > 0)
+                {
+                    <h4 class="font-weight-bold spanborder">
+                        <span>Posts (@Model.Count())</span>
+                    </h4>
+                    foreach (var item in Model)
+                    {
+                        <div class="mb-5 d-flex justify-content-between main-loop-card postbox">
+                            <div class="pr-3 article">
+                                <span class="catlist">
+                                    <a class="text-capitalize text-underline text-muted smoothscroll"
+                                       href="@Url.Action("Posts", "Categories", new { slug = item.Category.Name })">@item.Category.Name.ToUpper()</a>
+                                </span>
+                                <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                                    <h2 class="mb-1 h4 font-weight-bold">
+                                        <span class="text-dark">@item.PostTitle</span>
+                                    </h2>
+                                    @if (!string.IsNullOrEmpty(item.Excerpt))
+                                    {
+                                        <p class="excerpt">
+                                            @(item.Excerpt.Length > 126 ? item.Excerpt.Substring(0, 126) : item.Excerpt)...
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <div style="display:none;" id="postContent_@item.Id">@item.PostContent</div>
+                                        <p class="excerpt" id="metaContent_@item.Id"></p>
+                                        <script type="text/javascript">
+                                var content = $("#postContent_@item.Id").innerText;
+                                var firstText = $("p", content).first().text().slice(0,135);
+                                        $("#metaContent_@item.Id").html(firstText);
+
+                                        </script>
+                                    }
+                                    @{
+                                        await Html.RenderPartialAsync("_PostFooterSection", item);
+
+                                    }
+                                </a>
+
+                            </div>
+
+                            <div class="col-md-3 col-lg-3 col-sm-12 pr-0 text-right">
+                                @if (!string.IsNullOrEmpty(item.FeaturedImage) || !item.FeaturedImage.Equals("defaultPic.png"))
+                                {
+                                    <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                                        <img class="w-100" src="~/Uploads/@item.FeaturedImage" alt="@item.PostTitle">
+                                    </a>
+                                }
+                            </div>
+
+                        </div>
+
+
+                    }
+
+                }
+                else
+                {
+                    <p>&nbsp;</p>
+                    <p class="text-center lead">
+                        Nothing found with that search term, try to search for something else.
+                    </p>
+                }
+
+                <div class="clearfix"></div>
+                <div class="featured-category text-right mt-3 pb-3 text-uppercase smaller">
+                    <a href="@Url.Action("Index", "Stories")">
+                        All Stories <i class="fa fa-angle-right"></i>
+                    </a>
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="sticky-top sticky-top-offset">
+                    @{
+                        await Html.RenderPartialAsync("_featuredPosts", Featured);
+                    }
+                    <partial name="_sidebarAds" />
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

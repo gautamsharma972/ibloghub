@@ -1,0 +1,42 @@
+﻿@model iBlogHub.Models.PostsViewModel
+@{
+    ViewData["Title"] = "Success";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles{
+    <style type="text/css">
+        .center {
+            margin: auto;
+            padding: 70px 0;
+        }
+    </style>
+}
+<div class="container">
+    <div class="page-content" id="wrapper">
+        <div class="row d-flex h-100">
+            <div class="col-sm-12">
+                <div class="center">
+                    <div class="">
+                        <h2>@Model.PostTitle</h2>
+                        @if (Model.HasMessage)
+                        {
+                            <p class="text-muted">
+                                @Model.Message Click <a href="@Href($"~/{Model.ViewCategory}/{Model.slug}")">here</a> to preview.
+                            </p>
+                        }
+                        <p class="text-muted">To edit your post again, click <a href="@Url.Action("Edit", "Stories", new { slug = Model.slug})">here</a>.</p>
+                        <p>
+                            Meanwhile,<br />
+                            <a href="@Href("~/Identity/Account/Manage/MyStories")" class="btn btn-default"><i class="fa fa-th-list"></i> Check all your Stories</a><br />
+                            <a class="btn btn-default" href="@Href("~/Identity/Account/Manage/")">
+                                <i class="fa fa-user"></i> Visit your Profile
+                            </a>   <br />
+                            <a href="@Url.Action("Index", "Home")" class="btn btn-default"><i class="fa fa-home"></i> Back to Home Page</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,668 @@
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\appsettings.Development.json
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\appsettings.json
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.StaticWebAssets.xml
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.exe
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.deps.json
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.runtimeconfig.json
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.runtimeconfig.dev.json
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.pdb
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.Views.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.Views.pdb
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\AutoMapper.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Blazor.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Razor.Language.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.Razor.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Data.SqlClient.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.DotNet.PlatformAbstractions.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyModel.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Identity.Client.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\dotnet-aspnet-codegenerator-design.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\NuGet.Frameworks.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\PagedList.Core.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\PagedList.Core.Mvc.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Syncfusion.EJ2.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Syncfusion.Licensing.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Syncfusion.Core.XForms.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.AttributedModel.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.Convention.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.Hosting.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.Runtime.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.TypedParts.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\System.Configuration.ConfigurationManager.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\System.Runtime.Caching.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\System.Security.Cryptography.ProtectedData.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Xamarin.Forms.Core.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Xamarin.Forms.Platform.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Xamarin.Forms.Xaml.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win-arm64\native\sni.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win-x64\native\sni.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win-x86\native\sni.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\staticwebassets\iBlogHub.StaticWebAssets.Manifest.cache
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\staticwebassets\iBlogHub.StaticWebAssets.xml
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.MvcApplicationPartsAssemblyInfo.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.MvcApplicationPartsAssemblyInfo.cache
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorAssemblyInfo.cache
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorAssemblyInfo.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.AssemblyInfoInputs.cache
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.AssemblyInfo.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\XamlC.stamp
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.TagHelpers.input.cache
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.TagHelpers.output.cache
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorCoreGenerate.cache
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ExternalLogin.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ForgotPassword.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Lockout.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\LoginWith2fa.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\DeletePersonalData.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Email.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ExternalLogins.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\PersonalData.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\SetPassword.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ShowRecoveryCodes.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ResetPassword.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Categories\Index.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Categories\Posts.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Posts\Index.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Profile\Index.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_MenuHeader.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_NewsletterForm.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_SearchHeader.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Create.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Edit.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Index.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Success.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Tags\Posts.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorTargetAssemblyInfo.cache
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorTargetAssemblyInfo.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.Views.pdb
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.csproj.CopyComplete
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.pdb
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_UserInfo.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.csprojAssemblyReference.cache
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\staticwebassets\iBlogHub.StaticWebAssets.Manifest.cache
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\staticwebassets\iBlogHub.StaticWebAssets.xml
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.MvcApplicationPartsAssemblyInfo.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.MvcApplicationPartsAssemblyInfo.cache
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorAssemblyInfo.cache
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorAssemblyInfo.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.AssemblyInfoInputs.cache
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.AssemblyInfo.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\XamlC.stamp
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.TagHelpers.input.cache
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.TagHelpers.output.cache
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorCoreGenerate.cache
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ExternalLogin.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ForgotPassword.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Lockout.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\LoginWith2fa.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\DeletePersonalData.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Email.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ExternalLogins.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\PersonalData.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\SetPassword.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ShowRecoveryCodes.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_UserInfo.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ResetPassword.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Categories\Index.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Categories\Posts.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Posts\Index.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Profile\Index.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_MenuHeader.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_NewsletterForm.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_SearchHeader.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Create.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Edit.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Index.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Success.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Tags\Posts.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorTargetAssemblyInfo.cache
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorTargetAssemblyInfo.cs
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.dll
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.pdb
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\appsettings.Development.json
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\appsettings.json
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.StaticWebAssets.xml
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.exe
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.deps.json
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.runtimeconfig.json
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.runtimeconfig.dev.json
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.pdb
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.Views.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.Views.pdb
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\AutoMapper.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Blazor.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Razor.Language.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.Razor.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.Workspaces.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Data.SqlClient.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.DotNet.PlatformAbstractions.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Relational.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyModel.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Identity.Client.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\dotnet-aspnet-codegenerator-design.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\NuGet.Frameworks.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\PagedList.Core.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\PagedList.Core.Mvc.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Syncfusion.EJ2.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Syncfusion.Licensing.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Syncfusion.Core.XForms.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.AttributedModel.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.Convention.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.Hosting.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.Runtime.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.TypedParts.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Configuration.ConfigurationManager.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Runtime.Caching.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Security.Cryptography.ProtectedData.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Xamarin.Forms.Core.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Xamarin.Forms.Platform.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Xamarin.Forms.Xaml.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win-arm64\native\sni.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win-x64\native\sni.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win-x86\native\sni.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+I:\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.Views.pdb
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.csproj.CopyComplete
+I:\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Bookmarks.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\appsettings.Development.json
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\appsettings.json
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.StaticWebAssets.xml
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.exe
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.deps.json
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.runtimeconfig.json
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.runtimeconfig.dev.json
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.pdb
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.Views.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\iBlogHub.Views.pdb
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\AutoMapper.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Blazor.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V3.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Identity.UI.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Razor.Language.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.Razor.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.Workspaces.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Data.SqlClient.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.DotNet.PlatformAbstractions.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Relational.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyModel.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Identity.Client.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\dotnet-aspnet-codegenerator-design.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\NuGet.Frameworks.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\PagedList.Core.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\PagedList.Core.Mvc.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\SendGrid.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Syncfusion.EJ2.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Syncfusion.Licensing.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Syncfusion.Core.XForms.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.AttributedModel.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.Convention.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.Hosting.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.Runtime.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Composition.TypedParts.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Configuration.ConfigurationManager.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Runtime.Caching.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Security.Cryptography.ProtectedData.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Xamarin.Forms.Core.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Xamarin.Forms.Platform.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Xamarin.Forms.Xaml.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win-arm64\native\sni.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win-x64\native\sni.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win-x86\native\sni.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\staticwebassets\iBlogHub.StaticWebAssets.Manifest.cache
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\staticwebassets\iBlogHub.StaticWebAssets.xml
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.MvcApplicationPartsAssemblyInfo.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.MvcApplicationPartsAssemblyInfo.cache
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorAssemblyInfo.cache
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorAssemblyInfo.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.AssemblyInfoInputs.cache
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.AssemblyInfo.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\XamlC.stamp
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.TagHelpers.input.cache
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.TagHelpers.output.cache
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorCoreGenerate.cache
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ExternalLogin.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ForgotPassword.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Lockout.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\LoginWith2fa.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Bookmarks.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\DeletePersonalData.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Drafts.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Email.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ExternalLogins.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Index.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\MyStories.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\PersonalData.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\SetPassword.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\ShowRecoveryCodes.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\SocialLinks.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_Layout.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_UserInfo.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ResetPassword.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\_StatusMessage.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Categories\Index.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Categories\Posts.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Home\Index.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Home\Privacy.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Newsletters\Create.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Newsletters\Verification.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Posts\Index.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Profile\Index.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Error.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_MenuHeader.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_NewsletterForm.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_SearchHeader.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_SearchResults.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Create.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Edit.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Index.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Success.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Tags\Posts.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\_ViewImports.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\_ViewStart.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorTargetAssemblyInfo.cache
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.RazorTargetAssemblyInfo.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.Views.pdb
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.csproj.CopyComplete
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.dll
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.pdb
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\aws-beanstalk-tools-defaults.json
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\AWSSDK.Core.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\AWSSDK.ElasticBeanstalk.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.Razor.Host.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Globalization.CultureInfoCache.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\SendGrid.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\bin\Debug\netcoreapp3.0\SimpleMvcSitemap.dll
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Bookmarks.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\Drafts.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\MyStories.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Areas\Identity\Pages\Account\Manage\SocialLinks.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Newsletters\Create.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Newsletters\Verification.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Notauthorized.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_featuredPosts.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_SearchResults.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_SelectLanguagePartial.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_sidebarAds.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_SocialSharing.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Featured.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_PostFooterSection.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CategoryWidget.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_MainPostsWidget.cshtml.g.cs
+E:\Startup's\iBlogHub 3.0\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_PostSingleFeatured.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\aws-beanstalk-tools-defaults.json
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\AWSSDK.Core.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\AWSSDK.ElasticBeanstalk.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.Razor.Host.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Extensions.Globalization.CultureInfoCache.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\SimpleMvcSitemap.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\System.Drawing.Common.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\iBlogHub.csprojAssemblyReference.cache
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Admin\Index.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Posts\Quotes.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\Notauthorized.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_CategoryWidget.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_featuredPosts.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_Files.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_MainPostsWidget.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_PostFooterSection.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_PostSingleFeatured.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_SelectLanguagePartial.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_sidebarAds.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Shared\_SocialSharing.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Featured.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\Quotes.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\QuotesCreate.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\QuotesEdit.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\obj\Debug\netcoreapp3.0\Razor\Views\Stories\_NewPost.cshtml.g.cs
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Markdig.dll
+I:\Sujay\iBlogHub\iBlogHub\bin\Debug\netcoreapp3.0\Microsoft.SyndicationFeed.ReaderWriter.dll

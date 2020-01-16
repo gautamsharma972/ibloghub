@@ -1,0 +1,95 @@
+﻿@model iBlogHub.Models.PostsViewModel
+
+<div class="card border-0 mb-4">
+    <a href="@Url.Action("Index", "Posts", new { category = Model.Category.slug, slug = Model.slug })">
+        <img src="~/Uploads/@Model.FeaturedImage" class="w-100 wp-post-image" alt="@Model.PostTitle">
+    </a>
+    <div class="card-body pl-0 pr-0">
+        <h2 class="h3 font-weight-bold">
+            <a class="text-dark" href="@Url.Action("Index", "Posts", new { category = Model.Category.slug, slug = Model.slug })">
+                @Model.PostTitle
+            </a>
+        </h2>
+        <a href="@Url.Action("Index", "Posts", new { category = Model.Category.slug, slug = Model.slug })" class="text-muted">
+            @if (!string.IsNullOrEmpty(Model.Excerpt))
+            {
+                <p>
+                    @Model.Excerpt
+                </p>
+            }
+            else
+            {
+                <div style="display:none;" id="postContent_@Model.Id">@Model.PostContent</div>
+                <p id="metaContent_@Model.Id"></p>
+                <script type="text/javascript">
+                                var content = $("#postContent_@Model.Id").innerText;
+                                var firstText = $("p", content).first().text().slice(0,135);
+                                        $("#metaContent_@Model.Id").html(firstText);
+                </script>
+            }
+        </a>
+        <form asp-controller="Stories" asp-action="AddToBookmark" data-ajax-begin="onBegin"
+              data-ajax-failure="NotifyError" data-ajax-success="Notify"
+              data-ajax="true" data-ajax-method="POST" >
+            <div class="d-flex align-items-center">
+                <img class="rounded-circle" src="~/Uploads/@(Model.Author.Photo==null?"avatar.jpg":Model.Author.Photo)" alt="@Model.Author.FirstName" width="70">
+                <small class="ml-3">
+                    <a href="@Url.Action("Index", "Profile", new { username = Model.Author.UserName})" class="text-dark">
+                        @Model.Author.FirstName
+                    </a>
+                    <span>in</span> 
+                    <span class="catlist">
+            <a class="text-capitalize text-dark smoothscroll"
+               href="@Url.Action("Posts", "Categories", new { slug = Model.Category.Name })">@Model.Category.Name</a>
+        </span>
+                    <span class="text-muted d-block mt-1">
+                        @Model.PostDate.ToString("MMM dd, yyyy") ·
+                        <span class="reading-time">
+                            @{
+                                iBlogHub.Helpers.MinReads minReads = new iBlogHub.Helpers.MinReads(Model.PostContent);
+                            }
+                            @minReads.TotalMinReads()
+                        </span>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Admin") || User.Identity.Name == Model.Author.UserName)
+                            {
+                                <span>
+                                    ·
+                                    <a class="text-sm-left" href="@Url.Action("Edit", "Stories", new { slug = Model.slug})"><i class="fa fa-edit"></i> Edit</a>
+                                    ·
+                                    <a class="text-sm-left text-danger" href="#" data-id="@Model.Id" id="btnDel" data-title="@Model.PostTitle" data-href="@Url.Action("Delete", "Stories", new { slug = Model.slug})"><i class="fa fa-times"></i> Delete</a>
+                                </span>
+                            }
+                        }
+                        <input type="hidden" name="slug" value="@Model.slug" />
+                        <span class="text-muted">&nbsp;·&nbsp;</span>
+                        <button style="padding:0px;" class="btn-link btn btn-xs text-muted btnAddtoStory" title="@(User.Identity.IsAuthenticated?"Add to Bookmarks":"Login to add this story to your Bookmarks")" type="submit" data-toggle="tooltip" ><i class="far fa-bookmark"></i></button>
+
+                    </span>
+
+                </small>
+            </div>
+            @*<div class="d-flex align-items-center">
+                    <a class="mr-2" href="@Url.Action("Index", "Profile", new { username= Model.Author.UserName})">
+                        <img alt="" src="~/Uploads/@Model.Author.Photo" srcset="~/Uploads/@Model.Author.Photo 2x" class="avatar avatar-50 photo rounded-circle imgavt" height="50" width="50">
+                    </a>
+                    <small class="thecatlinks text-muted">
+                        <a href="@Url.Action("Index", "Profile", new { username= Model.Author.UserName})" class="text-muted">@Model.Author.FirstName @Model.Author.LastName</a>
+                        In <span class="catlist">
+                            <a class="text-capitalize text-muted smoothscroll" href="@Url.Action("Posts", "Categories", new { slug = Model.Category.Name })">@Model.Category.Name</a>
+                        </span>
+                    </small>
+                    <small class="text-muted d-block">
+                        @{ iBlogHub.Helpers.TimesAgo postedOn = new iBlogHub.Helpers.TimesAgo();
+                            var time = postedOn.Time(Model.PostDate);
+                        }
+                        @time&nbsp;·&nbsp;@Model.ViewsCount views
+                    </small>
+
+                </div>*@
+        </form>
+
+    </div>
+</div>

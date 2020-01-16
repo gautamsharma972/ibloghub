@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMo0Ji3fFMUKX8NO137S7IgAAAAACAAAAAAAQZgAAAAEAACAAAAAAWBQXMapwrYQGm67LM/sc0XKRSiWuSpDgIx16pEY6vQAAAAAOgAAAAAIAACAAAAAR/B5O6Bk0mo6llwNhi05mULMkTESQCLuOgogYJoc+MyAAAACk37YrXuiZD+29YHIKKxCkdJSdCkUN/FDeFf9igalHxUAAAAA0/VIGEWk9FtsX0n+gMixocuALfkVmI7KJ4IM3oWIS2qZ7hCQgE3duo2cRICNe8hc8BgfZvb4X+Mz7c/iv5Wck</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=43.255.152.25,1433%3b Database=ph11747438651_%3b User ID=ibloghub%3b Password={Ibloghub479!}%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

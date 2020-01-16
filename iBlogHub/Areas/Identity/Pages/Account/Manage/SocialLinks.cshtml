@@ -1,0 +1,40 @@
+﻿@page
+@model iBlogHub.Areas.Identity.Pages.Account.Manage.SocialLinksModel
+@{
+          ViewData["Title"] = "Social Profile";
+    ViewData["ActivePage"] = ManageNavPages.SocialLinks;
+     Layout = "~/Areas/Identity/Pages/Account/Manage/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="font-weight-bold spanborder">
+                <span>Manage Social Profiles</span>
+            </h4>
+            <partial name="_StatusMessage" model="Model.StatusMessage" />
+            <form id="social-form" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                @for (int i = 0; i < Model.SocialProfiles.Count; i++)
+                {
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            @Html.HiddenFor(a => Model.SocialProfiles[i].Id)
+                            @Html.HiddenFor(a => Model.SocialProfiles[i].Name)
+                            @Html.HiddenFor(a => Model.SocialProfiles[i].PublicName)
+                            <label>@Model.SocialProfiles[i].PublicName</label>
+                            <input placeholder="@Model.SocialProfiles[i].PublicName" asp-for="SocialProfiles[i].Url" class="form-control" />
+                            <span asp-validation-for="SocialProfiles[i].Url" class="text-danger"></span>
+                        </div>
+                    </div>
+                }
+                <button id="update-profile-button" type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

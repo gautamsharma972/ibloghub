@@ -1,0 +1,163 @@
+﻿@model IEnumerable<iBlogHub.Models.CategoryViewModel>
+@{
+    ViewData["Title"] = "Categories";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Featured = _postsService.FeaturedPosts;
+    ViewBag.IncludeAds = true;
+    ViewBag.MetaDescription = "Featured Categories";
+    IList<string> Ktags = new List<string>();
+    string tags = "";
+    foreach (var item in Model)
+    {
+        Ktags.Add(item.Name);
+    }
+    tags = string.Join(",", Ktags);
+    ViewBag.KeyWords = "featured, categories, ibloghub, " + tags;
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <p class="text-uppercase">
+                <span class="catlist">
+                    <a class="sscroll text-muted">Categories</a>
+                </span>
+            </p>
+            @foreach (var cat in Model.Where(a => a.Posts.Count != 0))
+            {
+                <h4 style="cursor:pointer;" class="font-weight-bold spanborder text-capitalize" onclick="toggleCollapse('_@cat.slug');" data-toggle="collapse" data-animation="true" aria-expanded="true" data-target="_@cat.slug">
+                    <span>
+                        @cat.Name <a class="text-primary text-muted text-sm-left" style="font-weight:lighter">@cat.Posts.Count Posts</a>
+                    </span>
+                    <a href="@Url.Action("Posts", "Categories", new { slug = cat.slug})" class="text-primary pr-0 text-right" style="float:right; font-size:1rem; font-weight:400;">View all <i class="fa fa-angle-right"></i></a>
+                </h4>
+
+                if (cat.Posts.Count() > 0)
+                {
+                    <div id="_@cat.slug" class="collapse _@cat.slug">
+                        @foreach (var item in cat.Posts.Take(10))
+                        {
+                        <div class="mb-5 d-flex justify-content-between main-loop-card">
+                            <div class="pr-3 article">
+                                <span class="catlist">
+                                    <a class="text-capitalize text-underline text-muted smoothscroll"
+                                       href="@Url.Action("Posts", "Categories", new { slug = item.Category.Name })">@item.Category.Name.ToUpper()</a>
+                                </span>
+                                <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                                    <h2 class="mb-1 h4 font-weight-bold">
+                                        <span class="text-dark">@item.PostTitle</span>
+                                    </h2>
+                                    @if (!string.IsNullOrEmpty(item.Excerpt))
+                                    {
+                                        <p class="excerpt">
+                                            @(item.Excerpt.Length > 126 ? item.Excerpt.Substring(0, 126) : item.Excerpt)...
+                                        </p>
+                                    }
+                                    else
+                                    {
+                                        <div style="display:none;" id="postContent_@item.Id">@item.PostContent</div>
+                                        <p class="excerpt" id="metaContent_@item.Id"></p>
+                                        <script type="text/javascript">
+                                var content = $("#postContent_@item.Id").innerText;
+                                var firstText = $("p", content).first().text().slice(0,135);
+                                        $("#metaContent_@item.Id").html(firstText);
+
+                                        </script>
+                                    }
+                                    @{
+                                        await Html.RenderPartialAsync("_PostFooterSection", item);
+
+                                    }
+                                </a>
+
+                            </div>
+
+                            <div class="col-md-3 col-lg-3 col-sm-12 pr-0 text-right">
+                                @if (!string.IsNullOrEmpty(item.FeaturedImage) || !item.FeaturedImage.Equals("defaultPic.png"))
+                                {
+                                    <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                                        <img class="w-100" src="~/Uploads/@item.FeaturedImage" alt="@item.PostTitle">
+                                    </a>
+                                }
+                            </div>
+
+                        </div>
+                        }
+                    </div>
+
+                }
+
+            }
+
+            <div class="clearfix"></div>
+            <div class="featured-category text-right mt-3 pb-3 text-uppercase smaller">
+                <a href="@Url.Action("Index", "Stories")">
+                    All Stories <i class="fa fa-angle-right"></i>
+                </a>
+
+                <div class="clearfix"></div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="sticky-top sticky-top-offset">
+                <div class="col-sm-12">
+                    @{
+                        await Html.RenderPartialAsync("_featuredPosts", Featured);
+                    }
+                    <partial name="_sidebarAds" />
+                </div>
+              
+            </div>
+        </div>
+
+    </div>
+</div>
+@section Scripts{
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="~/lib/highlight/prism.js"></script>
+    <script src="~/js/notify.js"></script>
+    <script src="~/js/prettify.js"></script>
+    <script type="text/javascript">
+
+        var onBegin = function () {
+            $("#loader").fadeIn();
+        };
+        function Notify(data) {
+            $("#loader").fadeOut();
+
+            if (data.error == true) {
+                Swal.fire({
+                    icon: "success",
+                    html: data.msg,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+            else {
+                Swal.fire({
+                    icon: "success",
+                    html: data.msg,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+
+        }
+        function NotifyError(data) {
+            $("#loader").fadeOut();
+            Swal.fire({
+                title: "Error!",
+                text: "Some error occurred, please try again later.",
+                buttonsStyling: true
+            });
+
+        }
+
+        function toggleCollapse(id) {
+            $("#" + id).toggleClass("show", 1000, "easeOutSine");
+        }
+    </script>
+}

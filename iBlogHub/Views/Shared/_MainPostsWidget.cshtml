@@ -1,0 +1,50 @@
+﻿@model IEnumerable<iBlogHub.Models.PostsViewModel>
+
+@foreach (var item in Model.OrderByDescending(a => a.PostDate))
+{
+    <div class="mb-5 d-flex justify-content-between main-loop-card postbox">
+        <div class="pr-3 article">
+            <span class="catlist">
+                <a class="text-capitalize text-underline text-muted smoothscroll"
+                   href="@Url.Action("Posts", "Categories", new { slug = item.Category.Name })">@item.Category.Name.ToUpper()</a>
+            </span>
+            <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                <h2 class="mb-1 h4 font-weight-bold">
+                    <span class="text-dark">@item.PostTitle</span>
+                </h2>
+                @if (!string.IsNullOrEmpty(item.Excerpt))
+                {
+                    <p class="excerpt">
+                        @(item.Excerpt.Length > 126 ? item.Excerpt.Substring(0, 126) : item.Excerpt)...
+                    </p>
+                }
+                else
+                {
+                    <div style="display:none;" id="postContent_@item.Id">@item.PostContent</div>
+                    <p class="excerpt" id="metaContent_@item.Id"></p>
+                    <script type="text/javascript">
+                                var content = $("#postContent_@item.Id").innerText;
+                                var firstText = $("p", content).first().text().slice(0,135);
+                                        $("#metaContent_@item.Id").html(firstText);
+
+                    </script>
+                }
+                @{
+                    await Html.RenderPartialAsync("_PostFooterSection", item);
+
+                }
+            </a>
+            
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-sm-12 pr-0 text-right">
+            @if (!string.IsNullOrEmpty(item.FeaturedImage) || !item.FeaturedImage.Equals("defaultPic.png"))
+            {
+                <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                    <img class="w-100" src="~/Uploads/@item.FeaturedImage" alt="@item.PostTitle">
+                </a>
+            }
+        </div>
+
+    </div>
+}

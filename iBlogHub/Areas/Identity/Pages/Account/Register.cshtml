@@ -1,0 +1,140 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Join iBlogHub";
+    ViewBag.ShowMessage = false;
+}
+
+@section Styles {
+    <style type="text/css">
+        .jumbotron {
+            background-size: cover;
+            padding: 7rem 0rem;
+        }
+    </style>
+}
+
+<div class="container">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem col-md-12 bg-lightblue position-relative">
+                    <div class="col-md-12 pr-0 h-100 tofront">
+                        <div class="row justify-content-between">
+                            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url('/images/subsImg.jpg');">
+                            </div>
+                            <div class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
+
+                                <div class="col-sm-11 col-sm-offset-1">
+                                    <h1 class="mb-3">Sign up!</h1>
+                                    <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                                        <p class="mb-3 lead">
+                                            Join to start exploring, Already on board? <a asp-page="./Login">Login</a>.
+                                            <div asp-validation-summary="All" class="text-danger"></div>
+                                        </p>
+                                        <div class="form-group row">
+                                            <div class="col-md-6">
+                                                <label asp-for="Input.FirstName"></label>
+                                                <input asp-for="Input.FirstName" placeholder="First Name" class="form-control" />
+                                                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label asp-for="Input.LastName"></label>
+                                                <input asp-for="Input.LastName" placeholder="Last Name" class="form-control" />
+                                                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <label asp-for="Input.Email"></label>
+                                                <input asp-for="Input.Email" placeholder="Email Address" class="form-control" />
+                                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-6">
+                                                <label asp-for="Input.Password"></label>
+                                                <input asp-for="Input.Password" placeholder="Password" class="form-control" />
+                                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label asp-for="Input.ConfirmPassword"></label>
+                                                <input asp-for="Input.ConfirmPassword" placeholder="Confirm Password" class="form-control" />
+                                                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <div class="checkbox">
+                                                    <input type="checkbox" class="checkbox-inline" id="checkTOS" />
+                                                    <label for="checkTOS">I agree to <a href="@Url.Action("TOS", "Home")">Terms of Service</a> and <a href="@Href("~/Home/TOS#_PrivacyPolicy")">Privacy Policy</a>.</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" id="btnSubmit" disabled class="btn btn-dark">Join now</button>
+                                        <p class="text-muted text-sm-left">No worries! You can always change these from your Profile section. </p>
+                                    </form>
+                                    @*<section>
+                                            <h4>Use another service to register.</h4>
+                                            <hr />
+                                            @{
+                                                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                                                {
+                                                    <div>
+                                                        <p>
+                                                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                                                            for details on setting up this ASP.NET application to support logging in via external services.
+                                                        </p>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                                                        <div>
+                                                            <p>
+                                                                @foreach (var provider in Model.ExternalLogins)
+                                                                {
+                                                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                                                }
+                                                            </p>
+                                                        </div>
+                                                    </form>
+                                                }
+                                            }
+                                        </section>*@
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script type="text/javascript">
+        $(function () {
+            $(".validation-summary-errors").find("ul").addClass("list-group");
+            $(".validation-summary-errors").find("li").addClass("list-group-item list-group-item-danger");
+
+            var checkbox = document.getElementById('checkTOS');
+            var btn = document.getElementById('btnSubmit');
+            $("#checkTOS").click(function () {
+                if (checkbox.checked == true) {
+                    btn.disabled = false;
+                }
+                else {
+                    btn.disabled = true;
+                }
+            });
+        });
+    </script>
+}

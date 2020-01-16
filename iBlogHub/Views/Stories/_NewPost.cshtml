@@ -1,0 +1,83 @@
+﻿@model iBlogHub.Models.PostInputCategoryModel
+@{
+    ViewData["Title"] = "Publish new Article";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.KeyWords = "Publish, new, story, code, articles, ibloghub";
+    ViewBag.MetaDescription = "Publish new Story";
+    IList<string> Atags = new List<string>();
+    var availableTags = _postsService.Tags;
+    var availableCategories = _postsService.Categories;
+    string tags = "";
+    foreach (var item in availableTags)
+    {
+        Atags.Add('"' + item.Name + '"');
+    }
+    tags = string.Join(",", Atags);   
+}
+@section Styles{
+    <link href="~/css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/lib/TagBox/css/jquery.tagit.css" rel="stylesheet" type="text/css">
+    <link href="~/lib/TagBox/css/tagit.ui-zendesk.css" rel="stylesheet" type="text/css">
+}
+
+<div class="container">
+    <div class="paged-content">
+        <div class="vertical-center mt-sm-5">
+            <form asp-controller="Stories" method="post" asp-action="Post" id="form1">
+                <div class="form-group row">
+                    <div class="col-sm-12 text-center">
+                        <h3 class="font-weight-bold">
+                            <span>Hello @_cUser.User.FirstName, What would you like to publish today?</span>
+                        </h3>
+                        <p class="text-muted">Select any one of the following category your post best fits to.</p>
+                    </div>
+                </div>
+                <div class="form-group row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 text-center">
+                        <div class="radio-toolbar">
+                            @foreach (var item in availableCategories.OrderBy(a => a.Id))
+                            {
+                                if (!string.IsNullOrEmpty(item.Image))
+                                {
+                                    <input type="radio" asp-for="Category" id="@item.Id" value="@item.Id">
+                                    <label class="btn btn-round btn-outline-dark" for="@item.Id">
+                                        <img src="~/Uploads/@item.Image" height="25" width="25" class="rounded-circle" /> @item.Name
+                                    </label>
+                                }
+                                else
+                                {
+                                    <input type="radio" asp-for="Category" id="@item.Id" value="@item.Id">
+                                    <label class="btn btn-round btn-outline-dark" for="@item.Id">
+                                        <span class="rounded-circle bg-dark" style="height:25px; width:25px; color:white">&nbsp;#&nbsp;</span> @item.Name
+                                    </label>
+                                }
+                            }
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+
+                    <div class="col-sm-12">
+                        <div class="float-right">
+                            <button type="submit" class="btn btn-primary step-1">Next</button>
+                        </div>
+                        <div class="float-left">
+                            <a class="btn btn-link text-purple" href="@Href("~/Identity/Account/Manage/MyStories")">Check all your Stories</a>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="~/js/notify.js"></script>
+}

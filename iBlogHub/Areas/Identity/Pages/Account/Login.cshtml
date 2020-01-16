@@ -1,0 +1,128 @@
+﻿@page "/Account/Login"
+
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    ViewBag.ShowMessage = false;
+}
+
+@section Styles {
+    <style type="text/css">
+        .jumbotron {
+            background-size: cover;
+            padding: 7rem 0rem;
+        }
+    </style>
+}
+<div class="container">
+    <div class="page-content">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid jumbotron-home pt-0 pb-0 mt-3 mb-2rem col-md-12 bg-lightblue position-relative">
+                    <div class="col-md-12 pr-0 h-100 tofront">
+                        <div class="row justify-content-between">
+                            <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url('/images/subsImg.jpg');">
+                            </div>
+                            <div id="loginForm" class="col-md-6 pt-6 pb-6 pr-lg-4 align-self-center">
+
+                                <div class="col-sm-11 col-sm-offset-1">
+                                    <h1 class="mb-3">Sign in</h1>
+                                    <form id="account" method="post">
+                                        <p class="mb-3 lead">
+                                            Sign in to continue, New here? <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Join IBlogHub</a>.
+                                            <div asp-validation-summary="All" class="text-danger"></div>
+                                            @if (Model.hasAuthMessage)
+                                            {
+                                                <div class="alert alert-primary"><i class="fa fa-info"></i> <span>@Model.AuthMessage</span></div>
+                                            }
+                                        </p>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <label asp-for="Input.Email" class="control-label"></label>
+                                                <input asp-for="Input.Email" class="form-control" placeholder="Registered Email Id" />
+                                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <label asp-for="Input.Password" class="control-label"></label>
+                                                <input asp-for="Input.Password" class="form-control" placeholder="Password" />
+                                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-offset-2 col-md-10">
+                                                <div class="checkbox">
+                                                    <label asp-for="Input.RememberMe">
+                                                        <input asp-for="Input.RememberMe" />
+                                                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-12">
+                                                <button type="submit" class="btn btn-dark">Log in</button>
+                                                <br />
+                                                <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>   <br />
+                                                <button type="submit" asp-page-handler="SendVerificationEmail" class="btn-link" style="padding:0px;margin:0px;border:0px">Resend email confirmation</button>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                    @*<div class="col-md-12">
+                                            @{
+                                                if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                                                {
+                                                    <div>
+                                                        <p>
+                                                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                                                            for details on setting up this ASP.NET application to support logging in via external services.
+                                                        </p>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
+                                                        <div>
+                                                            <p>
+                                                                @foreach (var provider in Model.ExternalLogins)
+                                                                {
+                                                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                                                }
+                                                            </p>
+                                                        </div>
+                                                    </form>
+                                                }
+                                            }
+                                        </div>*@
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script type="text/javascript">
+        $(function () {
+            $(".validation-summary-errors").find("ul").addClass("list-group");
+
+            $(".validation-summary-errors").find("li").addClass("list-group-item list-group-item-danger");
+
+        });
+    </script>
+}

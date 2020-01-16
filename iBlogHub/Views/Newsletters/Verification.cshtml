@@ -1,0 +1,29 @@
+﻿@model iBlogHub.Models.Newsletters
+
+<div class="text-center">
+    @if (ViewBag.Message != "0" || ViewBag.Message != "1")
+    {
+        <p class="lead"> @ViewBag.Message</p>
+    }
+    else
+    {
+        if (ViewBag.Message == "0")
+        {
+            <p class="lead">No mails were found</p>
+        }
+        else if (ViewBag.Message == "1")
+        {
+            <p class="lead">
+                Your link has expired. Please enter your MailId once again to receive a new one.
+                Please note, this link will expire in 24 hours.
+            </p>
+
+        }
+        using (Html.BeginForm("Create", "Newsletters", FormMethod.Post))
+        {
+            @Html.EditorFor(a => a.Email, new { @class = "form-control" })
+            <input type="submit" class="btn btn-primary" value="Subscribe" />
+        }
+    }
+
+</div>

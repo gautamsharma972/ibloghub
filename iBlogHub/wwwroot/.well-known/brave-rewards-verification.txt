@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ibloghub.com
+Token: 9134beb4e8d5d428564fccdf8d7221f6ae4855148bb34e7fb82b2a912f4c505d

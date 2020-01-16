@@ -1,0 +1,51 @@
+﻿@model IEnumerable<iBlogHub.Models.PostsViewModel>
+    <div class="col-sm-12">
+        <h6 class="font-weight-bold spanborder">
+            <span>FEATURED POSTS</span>
+        </h6>
+        <ol class="list-featured">
+            @foreach (var item in Model.Take(5))
+            {
+                <li class="mb-4 loved-item">
+                    <form asp-controller="Stories" asp-action="AddToBookmark" data-ajax-begin="onBegin"
+                          data-ajax-failure="NotifyError" data-ajax-success="Notify"
+                          data-ajax="true" data-ajax-method="POST" id="form0">
+
+                        <span>
+                            <h6 class="font-weight-bold">
+                                <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })" class="text-dark">@item.PostTitle</a>
+                            </h6>
+                            <a href="@Url.Action("Index", "Profile", new { username = item.Author.UserName})" class="text-muted">@item.Author.FirstName @item.Author.LastName</a>
+                            In <span class="catlist">
+                                <a class="text-capitalize text-muted smoothscroll" href="@Url.Action("Posts", "Categories", new { slug = item.Category.slug })">@item.Category.Name</a>
+                            </span>
+                        </span>
+                        <br />
+                        @{ iBlogHub.Helpers.TimesAgo postedOn = new iBlogHub.Helpers.TimesAgo();
+
+                            iBlogHub.Helpers.MinReads minReads = new iBlogHub.Helpers.MinReads(item.PostContent);
+                        }
+                        <span class="text-muted">@item.PostDate.ToString("MMM dd")</span>
+                        <input type="hidden" name="slug" value="@item.slug" />
+                        <span class="text-muted">&nbsp;·&nbsp;</span>
+                        <span class="text-muted">@minReads.TotalMinReads()</span>
+                        @*<button style="padding:0px;" class="btn-link btn btn-xs text-muted" title="Add to my stories" type="submit" data-toggle="tooltip" id="btnAddtoStory"><i class="far fa-bookmark"></i></button>*@
+
+                    </form>
+                </li>
+            }
+
+        </ol>
+        @if (ViewBag.isHomePage != true)
+        {
+            <div class="featured-category text-right mt-3 pb-3 text-uppercase smaller">
+
+                <a href="@Url.Action("Featured", "Stories")">
+                    Featured Posts <i class="fa fa-angle-right"></i>
+                </a>
+
+                <div class="clearfix"></div>
+            </div>
+        }
+
+    </div>

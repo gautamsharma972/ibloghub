@@ -1,0 +1,14 @@
+﻿@using (Html.BeginForm("Search", "Home", FormMethod.Get, new { @class = "bd-search hidden-sm-down" }))
+{
+    <div class="input-group ml-auto">
+        <input type="text" data-toggle="tooltip" title="Search for anything..."
+               class="form-control text-small hide border-right-0" id="txtsearch searchbox" name="q" value=""
+               placeholder="Search...">
+        <div class="input-group-append" style="border-left:0;"> 
+            <button type="submit" id="btnSearch" class="btn btn-sm btn-default input-group-text text-small bg-transparent border-left-0 searchbutton" 
+                    style="border-top-right-radius:50%; border-bottom-right-radius:50%; border-color:#eee">
+                <span class="fa fa-search" style="color:#999"></span>
+            </button>  
+        </div>
+    </div>
+}

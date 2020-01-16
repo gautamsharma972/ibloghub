@@ -1,0 +1,37 @@
+﻿@model IEnumerable<iBlogHub.Models.CategoryViewModel>
+ 
+<div id="allcategories" class="display-categories mt-5">
+    <p class="text-uppercase font-weight-light mb-0">
+        Categories
+    </p>
+
+    @if (Model.Count() > 0)
+    {
+        <div class="row">
+            @foreach (var item in Model.Where(a => a.Posts.Count != 0).OrderBy(a=>a.Id).Take(3)) 
+            {
+                <div class="col-lg-4 col-md-4 mt-4 col-sm-12">
+                    <div class="text-uppercase font-weight-bold mb-1">
+                        <a class="text-dark" href="@Url.Action("Posts", "Categories", new { slug = item.slug })" alt="View all posts in @item.Name">@item.Name</a>
+                    </div>
+                    <a href="@Url.Action("Posts", "Categories", new { slug = item.slug })">
+                        <img class="rounded" height="146" width="223" src="~/Uploads/@item.Image">
+                    </a>
+                    <a href="@Url.Action("Posts", "Categories", new { slug = item.slug })">
+                        <div class="text-muted mt-1">@item.Posts.Count Stories</div>
+                    </a>
+                </div>
+            }
+        </div>
+        <div class="featured-category text-right mt-3 pb-3 text-uppercase smaller">
+            <a href="@Url.Action("Index", "Categories")">
+                All Categories <i class="fa fa-angle-right"></i>
+            </a>
+
+            <div class="clearfix"></div>
+        </div>
+
+    }
+
+
+</div>

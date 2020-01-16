@@ -1,0 +1,317 @@
+﻿@model iBlogHub.Models.HomeViewModel
+@{
+    ViewBag.isHomePage = true;
+    ViewData["Title"] = "Stories, Articles, Ideas, Learn, Share & Interact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Guid> usedIDs = new List<Guid>();
+
+    var Featured = _postsService.FeaturedPosts;
+
+    var Categories = Model.CategoriesModel; 
+    ViewBag.IncludeAds = true;
+    ViewBag.isHomeFeaturedArticles = true;
+}
+
+<div class="container">
+    <div class="alignfullincol progress-bar-animated">
+        <div class="container-fluid homelatest removetoppadding">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-4 col-xl-4">
+                    @if (Model.Articles.Count > 0)
+                    {
+                        foreach (var item in Model.Articles.Where(a => a.FeaturedImage != null || !a.FeaturedImage.Equals("defaultPic.png")).Take(1))
+                        {
+                            usedIDs.Add(item.Id);
+                            <div class="card border-0 postbox_style2">
+                                <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                                    <img style="max-height:250px" src="~/Uploads/@item.FeaturedImage" class="topfirstimage" alt="@item.PostTitle">
+                                </a>
+                                <div class="card-body pl-0 pr-0 pb-0 ml-lg-38">
+                                    <h2 class="h4">
+                                        <a class="text-dark font-weight-bold" href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                                            @item.PostTitle
+                                        </a>
+                                    </h2>
+                                    <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })" class="text-muted">
+                                        @if (!string.IsNullOrEmpty(item.Excerpt))
+                                        {
+                                        <p @*class="excerpt"*@>
+                                            @(item.Excerpt.Length > 100 ? item.Excerpt.Substring(0, 100) : item.Excerpt)...
+                                        </p>
+                                        }
+                                        else
+                                        {
+                                            <div style="display:none;" id="postContent_@item.Id">@item.PostContent</div>
+                                            <p @*class="excerpt"*@ id="metaContent_@item.Id"></p>
+                                            <script type="text/javascript">
+                                var content = $("#postContent_@item.Id").innerText;
+                                var firstText = $("p", content).first().text();
+                                    $("#metaContent_@item.Id").html(firstText.slice(0, 126));
+                                            </script>
+                                        }
+                                    </a>
+                                    <div class="d-flex align-items-center">
+                                        @*@{
+                                                await Html.RenderPartialAsync("_PostFooterSection", item);
+                                            }*@
+                                        <form asp-controller="Stories" asp-action="AddToBookmark" data-ajax-begin="onBegin"
+                                              data-ajax-failure="NotifyError" data-ajax-success="Notify"
+                                              data-ajax="true" data-ajax-method="POST">
+                                            <small class="d-block text-muted">
+                                                <a href="@Url.Action("Index", "Profile", new { username = item.Author.UserName })" class="text-muted">
+                                                    @item.Author.FirstName @item.Author.LastName
+                                                </a>
+
+                                                <span>in </span><span class="catlist">
+                                                    <a class="text-capitalize text-muted smoothscroll"
+                                                       href="@Url.Action("Posts", "Categories", new { slug = item.Category.Name })">@item.Category.Name</a>
+                                                </span>
+
+                                                @*In <span class="catlist">
+                                                        <a class="text-capitalize text-muted smoothscroll"
+                                                           href="@Url.Action("Posts", "Categories", new { slug = Model.Category.Name })">@Model.Category.Name</a>
+                                                    </span>*@
+                                            </small>
+                                            <small class="text-muted">
+                                                @{ iBlogHub.Helpers.TimesAgo postedOn = new iBlogHub.Helpers.TimesAgo();
+                                                    var time = postedOn.Time(item.PostDate);
+                                                    iBlogHub.Helpers.MinReads minReads = new iBlogHub.Helpers.MinReads(item.PostContent);
+                                                }
+                                                @item.PostDate.ToString("dd MMM, yy")
+                                                &nbsp;·&nbsp;
+                                                @minReads.TotalMinReads()
+                                                @*@Model.ViewsCount views*@
+                                            </small>
+                                            <input type="hidden" name="slug" value="@item.slug" />
+                                            <span class="text-muted">&nbsp;·&nbsp;</span>
+                                            <button style="padding:0px;" class="btn-link btn btn-xs text-muted btnAddtoStory"
+                                                    title="@(User.Identity.IsAuthenticated ? "Add to Bookmarks" : "Login to add this story to your Bookmarks")"
+                                                    type="submit" data-toggle="tooltip">
+                                                <i class="far fa-bookmark text-muted"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+                <div class="col-sm-12 col-md-4 col-xl-4">
+                    @foreach (var item in Model.Articles.Where(q => (!usedIDs.Contains(q.Id))
+&& (q.FeaturedImage != null || !q.FeaturedImage.Equals("defaultPic.png"))).OrderByDescending(a => a.PostDate).Take(3))
+                    {
+
+                        <div class="mb-3 d-flex align-items-center post_box_style3">
+                            @if (!string.IsNullOrEmpty(item.FeaturedImage))
+                            {
+                                <div class="col-md-4 pl-0">
+
+                                    <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                                        <img style="height:100px;" class="attachment-postbox-style3 size-postbox-style3" src="~/Uploads/@item.FeaturedImage" alt="@item.PostTitle">
+                                    </a>
+
+                                </div>
+                            }
+                            <div class="@(!string.IsNullOrEmpty(item.FeaturedImage) ? "" : "col-md-12")">
+                                <h2 class="mb-2 h6 font-weight-bold underline-hover">
+                                    <a class="text-dark" href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">@item.PostTitle</a>
+                                </h2>
+                                @*@{
+                                        await Html.RenderPartialAsync("_PostFooterSection", item, ViewData["isFeaturedHomeArticles"]= true);
+                                    }*@
+                                <form asp-controller="Stories" asp-action="AddToBookmark" data-ajax-begin="onBegin"
+                                      data-ajax-failure="NotifyError" data-ajax-success="Notify"
+                                      data-ajax="true" data-ajax-method="POST">
+                                    <small class="d-block text-muted">
+                                        <a href="@Url.Action("Index", "Profile", new { username = item.Author.UserName })" class="text-muted">
+                                            @item.Author.FirstName @item.Author.LastName
+                                        </a>
+
+                                        <span>in </span><span class="catlist">
+                                            <a class="text-capitalize text-muted smoothscroll"
+                                               href="@Url.Action("Posts", "Categories", new { slug = item.Category.Name })">@item.Category.Name</a>
+                                        </span>
+
+                                        @*In <span class="catlist">
+                                                <a class="text-capitalize text-muted smoothscroll"
+                                                   href="@Url.Action("Posts", "Categories", new { slug = Model.Category.Name })">@Model.Category.Name</a>
+                                            </span>*@
+                                    </small>
+                                    <small class="text-muted">
+                                        @{ iBlogHub.Helpers.TimesAgo postedOn = new iBlogHub.Helpers.TimesAgo();
+                                            var time = postedOn.Time(item.PostDate);
+                                            iBlogHub.Helpers.MinReads minReads = new iBlogHub.Helpers.MinReads(item.PostContent);
+                                        }
+                                        @item.PostDate.ToString("dd MMM, yy")
+                                        &nbsp;·&nbsp;
+                                        @minReads.TotalMinReads()
+                                        @*@Model.ViewsCount views*@
+                                    </small>
+                                    <input type="hidden" name="slug" value="@item.slug" />
+                                    <span class="text-muted">&nbsp;·&nbsp;</span>
+                                    <button style="padding:0px;" class="btn-link btn btn-xs text-muted btnAddtoStory"
+                                            title="@(User.Identity.IsAuthenticated ? "Add to Bookmarks" : "Login to add this story to your Bookmarks")"
+                                            type="submit" data-toggle="tooltip">
+                                        <i class="far fa-bookmark text-muted"></i>
+                                    </button>
+                                </form>
+
+                            </div>
+                        </div>
+                        usedIDs.Add(item.Id);
+
+
+                    }
+                </div>
+                <div class="col-sm-12 col-md-4 col-xl-3">
+
+                    @foreach (var item in Model.Articles.Where(q => (!usedIDs.Contains(q.Id))
+&& (q.FeaturedImage != null || !q.FeaturedImage.Equals("defaultPic.png"))).OrderByDescending(a => a.PostDate).Take(1))
+                    {
+
+                        <div class="mt-3 mt-md-0 card border-0 mb-4 postbox_style2_right">
+                            @if (!string.IsNullOrEmpty(item.FeaturedImage))
+                            {
+                                <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">
+                                    <img src="~/Uploads/@item.FeaturedImage" class="attachment-postbox-style2-right size-postbox-style2-right wp-post-image" alt="@item.PostTitle">
+                                </a>
+                            }
+
+                            <div class="card-body pl-0 pr-0 pb-0 mr-lg-38">
+                                <h2 class="h4 font-weight-bold">
+                                    <a class="text-dark" href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })">@item.PostTitle</a>
+                                </h2>
+                                <a href="@Url.Action("Index", "Posts", new { category = item.Category.slug, slug = item.slug })" class="text-muted">
+                                    @if (!string.IsNullOrEmpty(item.Excerpt))
+                                    {
+                                    <p @*class="excerpt"*@>
+                                        @(item.Excerpt.Length > 76 ? item.Excerpt.Substring(0, 76) : item.Excerpt)...
+                                    </p>
+                                    }
+                                    else
+                                    {
+                                        <div style="display:none;" id="postContent_@item.Id">@item.PostContent</div>
+                                        <p @*class="excerpt"*@ id="metaContent_@item.Id"></p>
+                                        <script type="text/javascript">
+                                var content = $("#postContent_@item.Id").innerText;
+                                var firstText = $("p", content).first().text();
+                                    $("#metaContent_@item.Id").html(firstText.slice(0, 70));
+                                        </script>
+                                    }
+                                </a>
+
+                                <div class="d-flex align-items-center">
+                                    @*@{
+                                            await Html.RenderPartialAsync("_PostFooterSection", item);
+                                        }*@
+                                    <form asp-controller="Stories" asp-action="AddToBookmark" data-ajax-begin="onBegin"
+                                          data-ajax-failure="NotifyError" data-ajax-success="Notify"
+                                          data-ajax="true" data-ajax-method="POST">
+                                        <small class="d-block text-muted">
+                                            <a href="@Url.Action("Index", "Profile", new { username = item.Author.UserName })" class="text-muted">
+                                                @item.Author.FirstName @item.Author.LastName
+                                            </a>
+
+                                            <span>in </span><span class="catlist">
+                                                <a class="text-capitalize text-muted smoothscroll"
+                                                   href="@Url.Action("Posts", "Categories", new { slug = item.Category.Name })">@item.Category.Name</a>
+                                            </span>
+
+                                            @*In <span class="catlist">
+                                                    <a class="text-capitalize text-muted smoothscroll"
+                                                       href="@Url.Action("Posts", "Categories", new { slug = Model.Category.Name })">@Model.Category.Name</a>
+                                                </span>*@
+                                        </small>
+                                        <small class="text-muted">
+                                            @{ iBlogHub.Helpers.TimesAgo postedOn = new iBlogHub.Helpers.TimesAgo();
+                                                var time = postedOn.Time(item.PostDate);
+                                                iBlogHub.Helpers.MinReads minReads = new iBlogHub.Helpers.MinReads(item.PostContent);
+                                            }
+                                            @item.PostDate.ToString("dd MMM, yy")
+                                            &nbsp;·&nbsp;
+                                            @minReads.TotalMinReads()
+                                            @*@Model.ViewsCount views*@
+                                        </small>
+                                        <input type="hidden" name="slug" value="@item.slug" />
+                                        <span class="text-muted">&nbsp;·&nbsp;</span>
+                                        <button style="padding:0px;" class="btn-link btn btn-xs text-muted btnAddtoStory"
+                                                title="@(User.Identity.IsAuthenticated ? "Add to Bookmarks" : "Login to add this story to your Bookmarks")"
+                                                type="submit" data-toggle="tooltip">
+                                            <i class="far fa-bookmark text-muted"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        usedIDs.Add(item.Id);
+
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="featured-category spanborder text-right mt-3 pb-3 text-uppercase smaller">
+        <a href="@Url.Action("Featured", "Stories")">
+            Featured Posts <i class="fa fa-angle-right"></i>
+        </a>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="introjumbo jumbotron rounded-0 mb-5 p-0 bglight position-relative post-sticky">
+        <div class="row justify-content-between">
+            <div class="col-md-6 pt-4rem pb-4rem pl-5 pr-5 align-self-center">
+                <h1 class="mb-3">Subscribe to stay up to date!</h1>
+                <p class="mb-4 lead">
+                    Enter your Email Address to never miss an updates from iBlogHub, we never spam!
+                    <partial name="_NewsletterForm" />
+                </p>
+            </div>
+            <div class="col-md-6 p-0 text-right bgcover d-none d-md-block" style="background-image:url('/images/subsImg.jpg');">
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-8 col-lg-8 col-sm-12 main-loop pb-sm-6 pt-md-0 pt-lg-0">
+            <h6 class="font-weight-bold spanborder">
+                <span>LATEST</span>
+            </h6>
+
+            @{
+                await Html.RenderPartialAsync("_MainPostsWidget", Model.Articles.Where(a => !usedIDs.Contains(a.Id)).Take(16));
+            }
+
+            <div class="clearfix"></div>
+
+            <div class="featured-category spanborder text-right mt-3 pb-3 text-uppercase smaller">
+                <a href="@Url.Action("Index", "Stories")">
+                    All Stories <i class="fa fa-angle-right"></i>
+                </a>
+
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            @{
+                await Html.RenderPartialAsync("_CategoryWidget", Categories);
+            }
+        </div>
+
+        @if (Featured.Count() > 0)
+        {
+            <div class="col-md-4 col-sm-12 col-lg-4">
+                <div class="sticky-top sticky-top-offset">
+                    <div class="col-sm-12">
+                        @{
+                            await Html.RenderPartialAsync("_featuredPosts", Featured);
+                        }
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>

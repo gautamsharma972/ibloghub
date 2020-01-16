@@ -1,0 +1,169 @@
+﻿@model IEnumerable<iBlogHub.Models.PostsViewModel>
+@{
+    ViewData["Title"] = "Featured Posts on iBlogHub";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Categories = _postsService.Categories;
+    ViewBag.IncludeAds = true;
+    ViewBag.KeyWords = "Collection,Stories,Codes,and,Latest,Articles, ibloghub, blogs, " +
+                "blog, posts, categories, featured posts on ibloghub";
+    ViewBag.MetaDescription = "Recent Stories, Articles and Learning contents";
+    List<Guid> usedIds = new List<Guid>();
+}
+
+@section Seo{
+
+    @if (_postsService.FeaturedPosts.Count() > 0)
+    {
+        <meta name="image" content="~/Uploads/@_postsService.FeaturedPosts.Where(a => a.FeaturedImage != null).FirstOrDefault().FeaturedImage" />
+    }
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 main-loop">
+            @*<h4 class="font-weight-bold spanborder">
+                <span>Featured Posts</span>
+            </h4>*@
+            @if (_postsService.FeaturedPosts.Count() >= 1)
+            {
+                foreach (var item in _postsService.FeaturedPosts.Where(a => !string.IsNullOrEmpty(a.FeaturedImage)).OrderBy(a => a.Id).Take(1))
+                {
+                    await Html.RenderPartialAsync("_PostSingleFeatured", item);
+                    usedIds.Add(item.Id);
+                }
+                <div class="spanborder"></div>
+                await Html.RenderPartialAsync("_MainPostsWidget", _postsService.FeaturedPosts.Where(a => !usedIds.Contains(a.Id)).Take(16));
+
+            }
+
+            @if (_postsService.FeaturedPosts.Count() > 10)
+            {
+                <div class="mt-5">
+                    <ul class="pagination">
+                        @for (var i = 1; i <= _postsService.FeaturedPosts.Count(); i++)
+                        {
+                            <li class="page-item @(i == _postsService.FeaturedPosts.Count() ? "active" : "")">
+                                <a asp-controller="Stories" asp-action="Index" asp-route-currentpage="@i" class="page-link">@i</a>
+                            </li>
+                        }
+                    </ul>
+                    @*@PagedList.Core.PagedListPager(_postsService.FeaturedPosts, page => Url.Action("Index", new { page = page }),
+                        new PagedListRenderOptions
+                        {
+                            UlElementClasses = new string[] { "pagination" },
+                            LiElementClasses = new string[] { "page-item" },
+                            DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                            DisplayLinkToLastPage = PagedListDisplayMode.IfNeeded,
+                            LinkToPreviousPageFormat = string.Format("« Prev"),
+                            LinkToLastPageFormat = string.Format("»"),
+
+                        })*@
+
+                </div>
+            }
+
+            <div class="clearfix"></div>
+            <div class="featured-category text-right mt-3 pb-3 text-uppercase smaller">
+                <a href="@Url.Action("Index", "Stories")">
+                    All Stories <i class="fa fa-angle-right"></i>
+                </a>
+
+                <div class="clearfix"></div>
+            </div>
+
+
+            <div class="clearfix"></div>
+
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="sticky-top sticky-top-offset">
+                <div class="col-sm-12">
+                    <div id="allcategories" class="display-categories">
+                        <h6 class="font-weight-bold spanborder">
+                            <span>TOP CATEGORIES</span>
+                        </h6>
+
+                        @if (Categories.Count > 0)
+                        {
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    @foreach (var item in Categories.Where(a => a.Posts.Count != 0).Take(5)) //.Where(a => a.Articles.Count > 5)
+                                    {
+
+                                        <a href="@Url.Action("Posts", "Categories", new { slug = item.slug})">
+                                            <h5 style="cursor:pointer;" class="font-weight-bold ">
+                                                <span>
+                                                    @item.Name <span class="text-primary text-muted text-sm-left" style="font-weight:lighter">@item.Posts.Count Posts</span>
+                                                </span>
+                                            </h5>
+                                        </a>
+                                        <hr />
+
+                                    }
+                                </div>
+                            </div>
+                            <div class="featured-category text-right mt-3 pb-3 text-uppercase smaller">
+                                <a href="@Url.Action("Index", "Categories")">
+                                    All Categories <i class="fa fa-angle-right"></i>
+                                </a>
+
+                                <div class="clearfix"></div>
+                            </div>
+
+                        }
+                        <partial name="_sidebarAds" />
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="~/lib/highlight/prism.js"></script>
+    <script src="~/js/notify.js"></script>
+    <script src="~/js/prettify.js"></script>
+    <script type="text/javascript">
+
+        var onBegin = function () {
+            $("#loader").fadeIn();
+        };
+        function Notify(data) {
+            $("#loader").fadeOut();
+
+            if (data.error == true) {
+                Swal.fire({
+                    icon: "success",
+                    html: data.msg,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+            else {
+                Swal.fire({
+                    icon: "success",
+                    html: data.msg,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+
+        }
+        function NotifyError(data) {
+            $("#loader").fadeOut();
+            Swal.fire({
+                title: "Error!",
+                text: "Some error occurred, please try again later.",
+                buttonsStyling: true
+            });
+
+        }
+    </script>
+
+}
